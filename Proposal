@@ -1,0 +1,21 @@
+objective: to make a battle ship game
+
+class/attribute
+
+ship
+	id
+	hitpoint
+	location
+	score(pership)
+	
+board
+	id
+	row
+	column
+	grid
+	
+score 
+	total
+	highest
+
+	
