@@ -33,7 +33,7 @@ public static ArrayList<Ship> findShipByPosition(ArrayList<Ship> Ships, Integer 
     return searchResult;
 }
 
-public static ArrayList<Ship> findTankByPositionRegex(ArrayList<Ship> Ships, String regex) {
+public static ArrayList<Ship> findShipByPositionRegex(ArrayList<Ship> Ships, String regex) {
     ArrayList<Ship> searchResult = new ArrayList<>();
     for(Ship theShip : Ships) {
         if (theShip.getPosition().toString().matches(regex)) {

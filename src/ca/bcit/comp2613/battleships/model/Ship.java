@@ -50,7 +50,7 @@ public class Ship extends Object {
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        return "ship id: " + id + "position " + position + "endurance" + endurance; 
+        return "ship id: " + id + " position: " + position + " endurance: " + endurance; 
               
     }
 
