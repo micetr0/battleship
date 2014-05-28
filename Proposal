@@ -6,15 +6,24 @@ ship
 	id
 	hitpoint
 	location
-	score(pership)
+	score(per ship)
+	
+ship breakdown too include types:
+
+length 2 x 1 (length = endurance ie. 2 hit to sink a lengh 2 ship)
+length 3 x 2
+length 4 x 1
+length 5 x 1
 	
 board
 	id
-	row
-	column
+	row (x)
+	column (y)
 	grid
-	
-score 
+		
+//not sure if I need this	
+score (??)
+	id
 	total
 	highest
 
