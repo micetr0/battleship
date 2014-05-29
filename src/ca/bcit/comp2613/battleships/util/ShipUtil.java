@@ -15,7 +15,9 @@ public static ArrayList<Ship> shipGenerator(int numberCreate) {
     for(int i=0; i<numberCreate; i++){
         Ship ship = new Ship();
         ship.setId(Integer.toString(i));
+        //not sure how I am going to incorporate for x and y
         ship.setPosition(generator.nextInt(20));
+        //there's only 0-4 hp max
         ship.setEndurance(generator.nextInt(3));
         shipArray.add(ship);   
     }
