@@ -27,4 +27,21 @@ score (??)
 	total
 	highest
 
+-------------
+
+SHORTCUTS
+
+shift alt R -> replace all 
+
+control shift R --> open resource
+
+highlight method then press f3 to go to the source --> f2 to go to documentation (*NEED TO HAVE JDK INSTALLED!!)
+
+many to many relationship:
+
+need to be implemented between all the models (board and ship added already)
+
+MtM board
+MtM ship
+MtM markers
 	
