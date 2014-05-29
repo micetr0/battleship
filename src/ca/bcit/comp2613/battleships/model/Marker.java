@@ -21,7 +21,12 @@ public class Marker {
     }
 
 
-    public String getId() {
+    public Marker() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public String getId() {
         return id;
     }
 
@@ -73,7 +78,7 @@ public class Marker {
 
     @Override
     public String toString() {
-        return "Marker [id=" + id + ", positionX=" + positionX + ", positionY="
+        return "Marker id=" + id + ", positionX=" + positionX + ", positionY="
                 + positionY + ", hit=" + hit + ", miss=" + miss + "]";
     }    
 

@@ -39,7 +39,6 @@ public static ArrayList<Ship> findShipByEndurance(ArrayList<Ship> Ships, Integer
 
 
 /* 
-
 public static ArrayList<Ship> findShipByPosition(ArrayList<Ship> Ships, Integer thePosition) {
     ArrayList<Ship> searchResult = new ArrayList<>();
     for (Ship theShip : Ships) {
