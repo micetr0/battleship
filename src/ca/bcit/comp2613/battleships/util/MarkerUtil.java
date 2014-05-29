@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import ca.bcit.comp2613.battleships.model.Marker;
+import ca.bcit.comp2613.battleships.model.Ship;
 
 public class MarkerUtil {
 	
@@ -24,9 +25,18 @@ public class MarkerUtil {
 	        markerArray.add(marker);   
 	    }
 	    
-	    return markerArray;
-	    
-	    
-	    
+	    return markerArray;    
 	}
+	
+	public static ArrayList<Marker> findMarkerByPositionX(ArrayList<Marker> Markers, Integer positionX) {
+	    ArrayList<Marker> searchPosX = new ArrayList<>();
+	    //for each Ship in Ships, print the ship object, variable theShip takes value of each Ship object in the collection)
+	    for (Marker theMarker : Markers) {
+	        if (theMarker.getPositionX() == positionX) {
+	            searchPosX.add(theMarker);
+	        }
+	    }
+	    return searchPosX;
+	}
+	
 }

@@ -24,8 +24,9 @@ public class TestDriver {
      //marker class
         ArrayList<Marker> listOfMarker = MarkerUtil.markerGenerator(100);
         System.out.println(listOfMarker);
-        
-        
+     //find marker position X
+        ArrayList<Marker> markerSearch = MarkerUtil.findMarkerByPositionX(listOfMarker, 6);
+        System.out.println(markerSearch);
     }
     
 
