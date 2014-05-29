@@ -27,6 +27,8 @@ public class TestDriver {
      //find marker position X
         ArrayList<Marker> markerSearch = MarkerUtil.findMarkerByPositionX(listOfMarker, 6);
         System.out.println(markerSearch);
+        ArrayList<Marker> markerSearchRegex = MarkerUtil.findMarkerByPositionXRegex(listOfMarker, "10");
+        System.out.println(markerSearchRegex);
     }
     
 

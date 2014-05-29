@@ -13,7 +13,7 @@ public class MarkerUtil {
 	    Random generator = new Random();
 	    
 	    
-	    //outputing n quantity of marker
+	    //output n quantity of marker
 	    for(int i=0; i<numberCreate; i++){
 	    	
 	        Marker marker = new Marker();
@@ -28,6 +28,7 @@ public class MarkerUtil {
 	    return markerArray;    
 	}
 	
+	//add marker position X
 	public static ArrayList<Marker> findMarkerByPositionX(ArrayList<Marker> Markers, Integer positionX) {
 	    ArrayList<Marker> searchPosX = new ArrayList<>();
 	    //for each Ship in Ships, print the ship object, variable theShip takes value of each Ship object in the collection)
@@ -37,6 +38,17 @@ public class MarkerUtil {
 	        }
 	    }
 	    return searchPosX;
+	}
+	
+	//add regex stuff for
+	public static ArrayList<Marker> findMarkerByPositionXRegex(ArrayList<Marker> Markers, String regex) {
+	    ArrayList<Marker> searchResult = new ArrayList<>();
+	    for(Marker theMarker : Markers) {
+	        if (theMarker.getPositionX().toString().matches(regex)) {
+	            searchResult.add(theMarker);
+	        }
+	    }
+	    return searchResult;
 	}
 	
 }
