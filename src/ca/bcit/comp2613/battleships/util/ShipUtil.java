@@ -25,6 +25,21 @@ public static ArrayList<Ship> shipGenerator(int numberCreate) {
     return shipArray;
 }
 
+
+public static ArrayList<Ship> findShipByEndurance(ArrayList<Ship> Ships, Integer searchEndurance) {
+    ArrayList<Ship> searchEnduranceResult = new ArrayList<>();
+    //for each Ship in Ships, print the ship object, variable theShip takes value of each Ship object in the collection)
+    for (Ship theShip : Ships) {
+        if (theShip.getEndurance() == searchEndurance) {
+            searchEnduranceResult.add(theShip);
+        }
+    }
+    return searchEnduranceResult;
+}
+
+
+/* 
+
 public static ArrayList<Ship> findShipByPosition(ArrayList<Ship> Ships, Integer thePosition) {
     ArrayList<Ship> searchResult = new ArrayList<>();
     for (Ship theShip : Ships) {
@@ -34,6 +49,8 @@ public static ArrayList<Ship> findShipByPosition(ArrayList<Ship> Ships, Integer 
     }
     return searchResult;
 }
+*/
+
 
 public static ArrayList<Ship> findShipByPositionRegex(ArrayList<Ship> Ships, String regex) {
     ArrayList<Ship> searchResult = new ArrayList<>();
