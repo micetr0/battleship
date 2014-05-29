@@ -1,10 +1,13 @@
 package ca.bcit.comp2613.battleships.model;
 
+import java.util.List;
+
 public class Ship extends Object {
 	
 	private String id;
 	private Integer position;
 	private Integer endurance;
+	private List <Board> boards;
 	
 	//not required because its build-in
 	public Ship() {}

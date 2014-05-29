@@ -27,4 +27,13 @@ score (??)
 	total
 	highest
 
+-------------
+
+many to many relationship:
+
+need to be implemented between all the models (board and ship added already)
+
+MtM board
+MtM ship
+MtM markers
 	

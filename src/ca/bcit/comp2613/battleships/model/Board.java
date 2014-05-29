@@ -1,27 +1,32 @@
 package ca.bcit.comp2613.battleships.model;
 
+import java.util.List;
+
 public class Board {
     
-        private String boardId;
+        private String id;
         private Integer gridX;
         private Integer gridY;
         
+        //variable that will have multiple ship many to many relationship
+        private List < Ship > ships;
+        
     
-    public Board(String boardId, Integer gridX, Integer gridY) {
+    public Board(String id, Integer gridX, Integer gridY) {
             super();
-            this.boardId = boardId;
+            this.id = id;
             this.gridX = gridX;
             this.gridY = gridY;
         }
     
     
     public String getBoardId() {
-        return boardId;
+        return id;
     }
     
     
     public void setBoardId(String boardId) {
-        this.boardId = boardId;
+        this.id = boardId;
     }
     
     
@@ -47,7 +52,7 @@ public class Board {
     
     @Override
     public String toString() {
-        return "Board [boardId=" + boardId + ", gridX=" + gridX + ", gridY="
+        return "Board [boardId=" + id + ", gridX=" + gridX + ", gridY="
                 + gridY + "]";
     }
 
