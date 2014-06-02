@@ -5,7 +5,8 @@ import java.util.List;
 public class Ship extends Object {
 	
 	private String id;
-	private Integer position;
+	private Integer positionX;
+	private Integer positionY;
 	private Integer endurance;
 	private List <Board> boards;
 	
@@ -13,10 +14,11 @@ public class Ship extends Object {
 	public Ship() {}
 
 //generated using constructor
-    public Ship(String id, Integer position, Integer endurance) {
+    public Ship(String id, Integer positionX, Integer positionY, Integer endurance) {
         super();
         this.id = id;
-        this.position = position;
+        this.positionX = positionX;
+        this.positionY = positionY;
         this.endurance = endurance;
     }
 
@@ -31,13 +33,22 @@ public class Ship extends Object {
     }
 
 
-    public Integer getPosition() {
-        return position;
+    public Integer getPositionX() {
+        return positionX;
     }
 
 
-    public void setPosition(Integer position) {
-        this.position = position;
+    public void setPositionX(Integer position) {
+        this.positionX = positionX;
+    }
+    
+    public Integer getPositionY() {
+        return positionY;
+    }
+
+
+    public void setPositionY(Integer position) {
+        this.positionY = positionY;
     }
 
 
@@ -53,7 +64,7 @@ public class Ship extends Object {
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        return "ship id: " + id + " position: " + position + " endurance: " + endurance; 
+        return "ship id: " + id + " position: " + positionX +", " + positionY + " endurance: " + endurance; 
               
     }
 
