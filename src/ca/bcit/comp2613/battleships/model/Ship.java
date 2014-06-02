@@ -38,7 +38,7 @@ public class Ship extends Object {
     }
 
 
-    public void setPositionX(Integer position) {
+    public void setPositionX(Integer positionX) {
         this.positionX = positionX;
     }
     
@@ -47,7 +47,7 @@ public class Ship extends Object {
     }
 
 
-    public void setPositionY(Integer position) {
+    public void setPositionY(Integer positionY) {
         this.positionY = positionY;
     }
 

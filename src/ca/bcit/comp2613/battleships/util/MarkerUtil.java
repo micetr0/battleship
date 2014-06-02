@@ -40,6 +40,18 @@ public class MarkerUtil {
 	    return searchPosX;
 	}
 	
+	//add marker position Y
+	public static ArrayList<Marker> findMarkerByPositionY(ArrayList<Marker> Markers, Integer positionY) {
+	    ArrayList<Marker> searchPosY = new ArrayList<>();
+	    //for each Ship in Ships, print the ship object, variable theShip takes value of each Ship object in the collection)
+	    for (Marker theMarker : Markers) {
+	        if (theMarker.getPositionY() == positionY) {
+	            searchPosY.add(theMarker);
+	        }
+	    }
+	    return searchPosY;
+	}
+	
 	//add regex stuff for
 	public static ArrayList<Marker> findMarkerByPositionXRegex(ArrayList<Marker> Markers, String regex) {
 	    ArrayList<Marker> searchResult = new ArrayList<>();
