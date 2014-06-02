@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import ca.bcit.comp2613.battleships.model.Marker;
-import ca.bcit.comp2613.battleships.model.Ship;
+
 
 public class MarkerUtil {
 	
