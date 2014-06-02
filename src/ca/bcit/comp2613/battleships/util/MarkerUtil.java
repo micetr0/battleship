@@ -63,4 +63,14 @@ public class MarkerUtil {
 	    return searchResult;
 	}
 	
+	public static ArrayList<Marker> findMarkerByPositionYRegex(ArrayList<Marker> Markers, String regex) {
+	    ArrayList<Marker> searchResult = new ArrayList<>();
+	    for(Marker theMarker : Markers) {
+	        if (theMarker.getPositionY().toString().matches(regex)) {
+	            searchResult.add(theMarker);
+	        }
+	    }
+	    return searchResult;
+	}
+	
 }

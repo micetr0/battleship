@@ -20,37 +20,35 @@ public class TestDriver {
         ArrayList<Ship> shipSearchXRegex = ShipUtil.findShipByPositionXRegex(listOfShip, "5");
         //find by position Y
         ArrayList<Ship> shipSearchYRegex = ShipUtil.findShipByPositionYRegex(listOfShip, "5");
-        System.out.println(listOfShip);
         
         //Ship search query outputs
-        System.out.println("Ship List printed: ");
-    	System.out.println(" ");
-        System.out.println(listOfShip);
-       
-        System.out.println("Ship Endurance: ");
-    	System.out.println(" ");
-        System.out.println(shipEndurance);
-        
-        System.out.println("Search by Ship position X: ");
-    	System.out.println(" ");
-        System.out.println(shipSearchXRegex);
-        
-        System.out.println("Search by Ship position Y: ");
-    	System.out.println(" ");
-        System.out.println(shipSearchYRegex);
+   
+        System.out.println("Complete List of Ship" + listOfShip);    
+        System.out.println("Ship Endurance" + shipEndurance);
+        System.out.println("Search by Ship position X regex" +shipSearchXRegex);
+        System.out.println("Search by Ship position Y regex" + shipSearchYRegex);
         //System.out.println(shipSearch);
         
      //marker class
         System.out.println("Search by Marker: ");
     	System.out.println(" ");
         ArrayList<Marker> listOfMarker = MarkerUtil.markerGenerator(100);
-        System.out.println(listOfMarker);
+        System.out.println("Complete list of marker:" + listOfMarker);
         
-     //find marker position X
-        ArrayList<Marker> markerSearch = MarkerUtil.findMarkerByPositionX(listOfMarker, 6);
-        System.out.println(markerSearch);
+     //find marker by match position X and Y
+        ArrayList<Marker> markerXSearch = MarkerUtil.findMarkerByPositionX(listOfMarker, 6);
+        System.out.println("position X match: " + markerXSearch);
+        
+        ArrayList<Marker> markerYSearch = MarkerUtil.findMarkerByPositionY(listOfMarker, 6);
+        System.out.println("position Y match: " + markerYSearch);
+                
+     //find Marker by Regex position X and Y
+ 
+        ArrayList<Marker> markerYSearchRegex = MarkerUtil.findMarkerByPositionYRegex(listOfMarker, "10");
+        System.out.println("position X regex: " + markerYSearchRegex);
+        
         ArrayList<Marker> markerSearchRegex = MarkerUtil.findMarkerByPositionXRegex(listOfMarker, "10");
-        System.out.println(markerSearchRegex);
+        System.out.println("position Y regex: " + markerSearchRegex);
     }
     
 
