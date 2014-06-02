@@ -15,8 +15,9 @@ public static ArrayList<Ship> shipGenerator(int numberCreate) {
     for(int i=0; i<numberCreate; i++){
         Ship ship = new Ship();
         ship.setId(Integer.toString(i));
-        //not sure how I am going to incorporate for x and y
-        ship.setPosition(generator.nextInt(20));
+        //incorporate X and Y random position
+        ship.setPositionX(generator.nextInt(20));
+        ship.setPositionY(generator.nextInt(20));
         //there's only 0-4 hp max
         ship.setEndurance(generator.nextInt(3));
         shipArray.add(ship);   
@@ -51,10 +52,21 @@ public static ArrayList<Ship> findShipByPosition(ArrayList<Ship> Ships, Integer 
 */
 
 
-public static ArrayList<Ship> findShipByPositionRegex(ArrayList<Ship> Ships, String regex) {
+public static ArrayList<Ship> findShipByPositionXRegex(ArrayList<Ship> Ships, String regex) {
     ArrayList<Ship> searchResult = new ArrayList<>();
     for(Ship theShip : Ships) {
-        if (theShip.getPosition().toString().matches(regex)) {
+        if (theShip.getPositionX().toString().matches(regex)) {
+            searchResult.add(theShip);
+        }
+    }
+    return searchResult;
+}
+
+//will be looking to combine x and y search together
+public static ArrayList<Ship> findShipByPositionYRegex(ArrayList<Ship> Ships, String regex) {
+    ArrayList<Ship> searchResult = new ArrayList<>();
+    for(Ship theShip : Ships) {
+        if (theShip.getPositionY().toString().matches(regex)) {
             searchResult.add(theShip);
         }
     }
