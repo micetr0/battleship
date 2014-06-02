@@ -11,8 +11,7 @@ public class TestDriver {
 
     public static void main(String[] args) {
     	
-    	//ship class
-    	
+   //ship class
         ArrayList<Ship> listOfShip = ShipUtil.shipGenerator(100);
         //ArrayList<Ship> shipSearch = ShipUtil.findShipByPosition(listOfShip, 100);
         ArrayList<Ship> shipEndurance = ShipUtil.findShipByEndurance(listOfShip, 2);
@@ -25,11 +24,11 @@ public class TestDriver {
    
         System.out.println("Complete List of Ship" + listOfShip);    
         System.out.println("Ship Endurance" + shipEndurance);
-        System.out.println("Search by Ship position X regex" +shipSearchXRegex);
+        System.out.println("Search by Ship position X regex" + shipSearchXRegex);
         System.out.println("Search by Ship position Y regex" + shipSearchYRegex);
         //System.out.println(shipSearch);
         
-     //marker class
+   //marker class
         System.out.println("Search by Marker: ");
     	System.out.println(" ");
         ArrayList<Marker> listOfMarker = MarkerUtil.markerGenerator(100);
