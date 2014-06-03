@@ -10,14 +10,13 @@ public class Marker {
     private String miss;
     
     
-    public Marker(String id, Integer positionX, Integer positionY, String hit,String miss) {
+    public Marker(String id, Integer positionX, Integer positionY) {
         
         super();
         this.id = id;
         this.positionX = positionX;
         this.positionY = positionY;
-        this.hit = hit;
-        this.miss = miss;
+
     }
 
 
@@ -56,30 +55,10 @@ public class Marker {
     }
 
 
-    public String getHit() {
-        return hit;
-    }
-
-
-    public void setHit(String hit) {
-        this.hit = hit;
-    }
-
-
-    public String getMiss() {
-        return miss;
-    }
-
-
-    public void setMiss(String miss) {
-        this.miss = miss;
-    }
-
-
     @Override
     public String toString() {
         return "Marker id=" + id + ", positionX=" + positionX + ", positionY="
-                + positionY + ", hit=" + hit + ", miss=" + miss + "]";
+                + positionY + "]";
     }    
 
 }

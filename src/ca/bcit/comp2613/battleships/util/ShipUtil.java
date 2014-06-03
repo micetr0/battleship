@@ -16,8 +16,7 @@ public static ArrayList<Ship> shipGenerator(int numberCreate) {
         Ship ship = new Ship();
         ship.setId(Integer.toString(i));
         //incorporate X and Y random position
-        ship.setPositionX(generator.nextInt(20));
-        ship.setPositionY(generator.nextInt(20));
+        ship.setPosition(generator.nextInt(20),generator.nextInt(20));
         //there's only 0-4 hp max
         ship.setEndurance(generator.nextInt(3));
         shipArray.add(ship);   
@@ -25,7 +24,6 @@ public static ArrayList<Ship> shipGenerator(int numberCreate) {
     
     return shipArray;
 }
-
 
 public static ArrayList<Ship> findShipByEndurance(ArrayList<Ship> Ships, Integer searchEndurance) {
     ArrayList<Ship> searchEnduranceResult = new ArrayList<>();
@@ -39,42 +37,28 @@ public static ArrayList<Ship> findShipByEndurance(ArrayList<Ship> Ships, Integer
 }
 
 
-/* 
-public static ArrayList<Ship> findShipByPosition(ArrayList<Ship> Ships, Integer thePosition) {
+public static ArrayList<Ship> findShipByPosition(ArrayList<Ship> Ships, Integer thePositionX, Integer thePositionY) {
     ArrayList<Ship> searchResult = new ArrayList<>();
     for (Ship theShip : Ships) {
-        if (theShip.getPosition() == thePosition) {
+        if (theShip.getPosition() == thePositionX + thePositionY) {
             searchResult.add(theShip);
         }
     }
     return searchResult;
 }
-*/
 
 
-public static ArrayList<Ship> findShipByPositionXRegex(ArrayList<Ship> Ships, String regex) {
+public static ArrayList<Ship> findShipByPositionRegex(ArrayList<Ship> Ships, String regex) {
     ArrayList<Ship> searchResult = new ArrayList<>();
     for(Ship theShip : Ships) {
-        if (theShip.getPositionX().toString().matches(regex)) {
+        if (theShip.getPosition().toString().matches(regex)) {
             searchResult.add(theShip);
         }
     }
     return searchResult;
 }
-
-//will be looking to combine x and y search together
-public static ArrayList<Ship> findShipByPositionYRegex(ArrayList<Ship> Ships, String regex) {
-    ArrayList<Ship> searchResult = new ArrayList<>();
-    for(Ship theShip : Ships) {
-        if (theShip.getPositionY().toString().matches(regex)) {
-            searchResult.add(theShip);
-        }
-    }
-    return searchResult;
-}
-
 
 public static void printShip(Ship ship) {
     System.out.println(ship);
-}
+	}
 }

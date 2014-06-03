@@ -15,17 +15,18 @@ public class TestDriver {
         ArrayList<Ship> listOfShip = ShipUtil.shipGenerator(100);
         //ArrayList<Ship> shipSearch = ShipUtil.findShipByPosition(listOfShip, 100);
         ArrayList<Ship> shipEndurance = ShipUtil.findShipByEndurance(listOfShip, 2);
-        //find by position X
-        ArrayList<Ship> shipSearchXRegex = ShipUtil.findShipByPositionXRegex(listOfShip, "5");
-        //find by position Y
-        ArrayList<Ship> shipSearchYRegex = ShipUtil.findShipByPositionYRegex(listOfShip, "5");
+        //find by position regex
+        ArrayList<Ship> shipSearchRegex = ShipUtil.findShipByPositionRegex(listOfShip, "5 5");
+        //find by position
+        ArrayList<Ship> shipSearchPosition = ShipUtil.findShipByPosition(listOfShip, 4,5);
         
         //Ship search query outputs
    
         System.out.println("Complete List of Ship" + listOfShip);    
         System.out.println("Ship Endurance" + shipEndurance);
-        System.out.println("Search by Ship position X regex" + shipSearchXRegex);
-        System.out.println("Search by Ship position Y regex" + shipSearchYRegex);
+        System.out.println("Search by Ship position regex" + shipSearchRegex);
+        System.out.println("Search by Ship position " + shipSearchPosition);
+
         //System.out.println(shipSearch);
         
    //marker class
