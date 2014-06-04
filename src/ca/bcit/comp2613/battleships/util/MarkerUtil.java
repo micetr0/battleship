@@ -13,11 +13,13 @@ public class MarkerUtil {
 	    ArrayList<Marker> markerArray = new ArrayList<>();
 	    Random generator = new Random();
 	    
-	    ArrayList<markerState> markerResults = new ArrayList<markerState>();
+	    ArrayList<markerState> markerResult = new ArrayList<markerState>();
 		
-		markerResults.add(markerState.HIT);
-		markerResults.add(markerState.MISS);
-		    
+		markerResult.add(markerState.HIT);
+		markerResult.add(markerState.MISS);
+		
+		markerResult.get((int)(Math.random()*2));
+				
 	    //output n quantity of marker
 	    for(int i=0; i<numberCreate; i++){
 	    	
@@ -26,7 +28,7 @@ public class MarkerUtil {
 	        //not sure how I am going to incorporate for x and y
 	        marker.setPositionX(generator.nextInt(20));
 	        marker.setPositionY(generator.nextInt(20));
-	        marker.setRandomHitMiss(markerResults.get((int)(Math.random()*3)));
+	        marker.getRandomHitMiss();
 	        markerArray.add(marker);   
 	    }
 	return markerArray;    

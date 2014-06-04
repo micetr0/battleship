@@ -54,12 +54,20 @@ public class TestDriver {
         
         System.out.println(" ");
         System.out.println("Asgn2 End");
-        
-        
-        
         System.out.println("");
+        
+        
+      
         System.out.println("Asgn3 Start");
-        System.out.println("Asgn3 Start");
+        System.out.println("");
+        
+        	System.out.println(listOfMarker);
+        
+        System.out.println("Asgn3 end");
+        System.out.println("");
+        
+        
+        
         
         
         

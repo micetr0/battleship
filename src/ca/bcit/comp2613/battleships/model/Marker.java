@@ -56,21 +56,20 @@ public class Marker {
         this.positionY = positionY;
     }
 
-
-    @Override
-    public String toString() {
-        return "Marker id=" + id + ", positionX=" + positionX + ", positionY="
-                + positionY + "]";
-    }    
-    
 	//add marker hit or miss via emu
-	 public Object getRandomHitMiss() {
+	 public String getRandomHitMiss() {
 	    	return markerResult;
 	    }
 	 
 	 public void setRandomHitMiss() {
 		 this.markerResult = markerResult;
 	    }
+	 
+	 @Override
+	 public String toString() {
+	     return "Marker id= " + id + ", positionX= " + positionX + ", positionY= "
+	                + positionY + ", Hit or Miss= " + markerResult + "]";
+	    } 
     
    
 
