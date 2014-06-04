@@ -6,16 +6,15 @@ public class Marker {
     private String id;
     private Integer positionX;
     private Integer positionY;
-    private String hit;
-    private String miss;
-    
-    
+    enum markerResult {hit, miss};
+
     public Marker(String id, Integer positionX, Integer positionY) {
         
         super();
         this.id = id;
         this.positionX = positionX;
         this.positionY = positionY;
+       
 
     }
 

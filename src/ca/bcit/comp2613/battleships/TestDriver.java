@@ -21,7 +21,8 @@ public class TestDriver {
         ArrayList<Ship> shipSearchPosition = ShipUtil.findShipByPosition(listOfShip, 4,5);
         
         //Ship search query outputs
-   
+        System.out.println("Asgn2 Start");
+        System.out.println("");
         System.out.println("Complete List of Ship" + listOfShip);    
         System.out.println("Ship Endurance" + shipEndurance);
         System.out.println("Search by Ship position regex" + shipSearchRegex);
@@ -49,6 +50,11 @@ public class TestDriver {
         
         ArrayList<Marker> markerSearchRegex = MarkerUtil.findMarkerByPositionXRegex(listOfMarker, "10");
         System.out.println("position Y regex: " + markerSearchRegex);
+        
+        System.out.println(" ");
+        System.out.println("Asgn2 End");
+        
+        
     }
     
 
