@@ -61,7 +61,7 @@ public class TestDriver {
         System.out.println("Asgn3 Start");
         System.out.println("");
         
-        	System.out.println(listOfMarker);
+        	System.out.println("this list is modified to have output for marker enum class" + listOfMarker);
         
         System.out.println("Asgn3 end");
         System.out.println("");

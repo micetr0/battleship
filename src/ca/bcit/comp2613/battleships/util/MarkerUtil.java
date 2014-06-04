@@ -17,7 +17,6 @@ public class MarkerUtil {
 		
 		markerResult.add(markerState.HIT);
 		markerResult.add(markerState.MISS);
-		
 		markerResult.get((int)(Math.random()*2));
 				
 	    //output n quantity of marker

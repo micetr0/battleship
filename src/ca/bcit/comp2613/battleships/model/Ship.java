@@ -10,6 +10,7 @@ public class Ship extends Object {
 	private Integer positionY;
 	private Integer endurance;
 	
+	//establish relationship
 	private List <Board> boards;
 	
 	//not required because its build-in
