@@ -3,16 +3,21 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import ca.bcit.comp2613.battleships.model.Marker;
-
+import ca.bcit.comp2613.battleships.model.Marker.markerState;
 
 public class MarkerUtil {
 	
+		
 	public static ArrayList<Marker> markerGenerator(int numberCreate) {
 	    
 	    ArrayList<Marker> markerArray = new ArrayList<>();
 	    Random generator = new Random();
 	    
-	    
+	    ArrayList<markerState> markerResults = new ArrayList<markerState>();
+		
+		markerResults.add(markerState.HIT);
+		markerResults.add(markerState.MISS);
+		    
 	    //output n quantity of marker
 	    for(int i=0; i<numberCreate; i++){
 	    	
@@ -21,12 +26,12 @@ public class MarkerUtil {
 	        //not sure how I am going to incorporate for x and y
 	        marker.setPositionX(generator.nextInt(20));
 	        marker.setPositionY(generator.nextInt(20));
-	        //there's only 0-4 hp max
+	        marker.setRandomHitMiss(markerResults.get((int)(Math.random()*3)));
 	        markerArray.add(marker);   
 	    }
-	    
-	    return markerArray;    
+	return markerArray;    
 	}
+	
 	
 	//add marker position X
 	public static ArrayList<Marker> findMarkerByPositionX(ArrayList<Marker> Markers, Integer positionX) {

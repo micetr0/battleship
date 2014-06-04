@@ -1,21 +1,24 @@
 package ca.bcit.comp2613.battleships.model;
 
+
+
 public class Marker {
     
 
     private String id;
     private Integer positionX;
     private Integer positionY;
-    enum markerResult {hit, miss};
+    public enum markerState {HIT, MISS};
+    
+    private String markerResult;
 
-    public Marker(String id, Integer positionX, Integer positionY) {
+    public Marker(String id, Integer positionX, Integer positionY, String markerResult) {
         
         super();
         this.id = id;
         this.positionX = positionX;
         this.positionY = positionY;
-       
-
+        this.markerResult = markerResult;
     }
 
 
@@ -59,6 +62,17 @@ public class Marker {
         return "Marker id=" + id + ", positionX=" + positionX + ", positionY="
                 + positionY + "]";
     }    
+    
+	//add marker hit or miss via emu
+	 public Object getRandomHitMiss() {
+	    	return markerResult;
+	    }
+	 
+	 public void setRandomHitMiss() {
+		 this.markerResult = markerResult;
+	    }
+    
+   
 
 }
 
