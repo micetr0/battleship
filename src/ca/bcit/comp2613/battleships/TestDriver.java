@@ -16,7 +16,7 @@ public class TestDriver {
         //ArrayList<Ship> shipSearch = ShipUtil.findShipByPosition(listOfShip, 100);
         ArrayList<Ship> shipEndurance = ShipUtil.findShipByEndurance(listOfShip, 2);
         //find by position regex
-        ArrayList<Ship> shipSearchRegex = ShipUtil.findShipByPositionRegex(listOfShip, "5 5");
+        ArrayList<Ship> shipSearchRegex = ShipUtil.findShipByPositionRegex(listOfShip,"45");
         //find by position
         ArrayList<Ship> shipSearchPosition = ShipUtil.findShipByPosition(listOfShip, 4,5);
         
