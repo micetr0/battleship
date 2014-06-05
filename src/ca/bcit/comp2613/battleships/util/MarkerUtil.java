@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import ca.bcit.comp2613.battleships.model.Marker;
-import ca.bcit.comp2613.battleships.model.Marker.markerState;
+import ca.bcit.comp2613.battleships.model.markerState;
 
 public class MarkerUtil {
 	
@@ -13,12 +13,14 @@ public class MarkerUtil {
 	    ArrayList<Marker> markerArray = new ArrayList<>();
 	    Random generator = new Random();
 	    
-	    ArrayList<markerState> markerResult = new ArrayList<markerState>();
+	    //ArrayList<markerState> markerResult = new ArrayList<markerState>();
 		
-		markerResult.add(markerState.HIT);
-		markerResult.add(markerState.MISS);
-		markerResult.get((int)(Math.random()*2));
-				
+		//markerResult.add(markerState.HIT);
+		//markerResult.add(markerState.MISS);
+		Random random = new Random();
+		random.nextInt(numberCreate);
+		//markerResult.get((random.nextInt(2)));
+		int tempHit = 0;
 	    //output n quantity of marker
 	    for(int i=0; i<numberCreate; i++){
 	    	
@@ -27,7 +29,14 @@ public class MarkerUtil {
 	        //not sure how I am going to incorporate for x and y
 	        marker.setPositionX(generator.nextInt(20));
 	        marker.setPositionY(generator.nextInt(20));
-	        marker.getRandomHitMiss();
+	        tempHit = random.nextInt(2);
+	        if (tempHit == 0) {
+	        	 marker.setRandomHitMiss(markerState.HIT);
+	        } else {
+	        	marker.setRandomHitMiss(markerState.MISS);
+	        }
+	       
+	        //marker.getRandomHitMiss();
 	        markerArray.add(marker);   
 	    }
 	return markerArray;    

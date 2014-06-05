@@ -8,17 +8,15 @@ public class Marker {
     private String id;
     private Integer positionX;
     private Integer positionY;
-    public enum markerState {HIT, MISS};
-    
-    private String markerResult;
+    public markerState markerState;
 
-    public Marker(String id, Integer positionX, Integer positionY, String markerResult) {
+    public Marker(String id, Integer positionX, Integer positionY, markerState markerState) {
         
         super();
         this.id = id;
         this.positionX = positionX;
         this.positionY = positionY;
-        this.markerResult = markerResult;
+        this.markerState = markerState;
     }
 
 
@@ -57,18 +55,18 @@ public class Marker {
     }
 
 	//add marker hit or miss via emu
-	 public String getRandomHitMiss() {
-	    	return markerResult;
+	 public markerState getRandomHitMiss() {
+	    	return markerState;
 	    }
 	 
-	 public void setRandomHitMiss() {
-		 this.markerResult = markerResult;
+	 public void setRandomHitMiss(markerState markerState) {
+		 this.markerState = markerState;
 	    }
 	 
 	 @Override
 	 public String toString() {
 	     return "Marker id= " + id + ", positionX= " + positionX + ", positionY= "
-	                + positionY + ", Hit or Miss= " + markerResult + "]";
+	                + positionY + ", Hit or Miss= " + markerState + "]";
 	    } 
     
    
