@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Ship extends Object {
 	
-	private String id;
+	public String id;
 	private Integer positionX;
 	private Integer positionY;
 	private Integer endurance;

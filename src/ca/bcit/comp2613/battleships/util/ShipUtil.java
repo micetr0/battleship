@@ -1,10 +1,14 @@
 package ca.bcit.comp2613.battleships.util;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Random;
+import java.util.Collections;
+import java.util.List;
 
 import ca.bcit.comp2613.battleships.model.Ship;
 import ca.bcit.comp2613.battleships.model.ShipType;
+
 
 public class ShipUtil {
     
@@ -38,10 +42,16 @@ public static ArrayList<Ship> shipGenerator(int numberCreate) {
         }
                
         shipArray.add(ship);   
-    }
-    
+        
+/*      Collections.sort(ship);
+         for (Integer integer : ship) {
+            System.out.println(ship);
+        }
+*/               
+    }   
     return shipArray;
 }
+
 
 
 /*public static ArrayList<Ship> findShipByEndurance(ArrayList<Ship> Ships, Integer searchEndurance) {
@@ -56,7 +66,6 @@ public static ArrayList<Ship> shipGenerator(int numberCreate) {
 }
 */
 
-
 public static ArrayList<Ship> findShipByPositionX(ArrayList<Ship> Ships, Integer thePositionX) {
     ArrayList<Ship> searchResult = new ArrayList<>();
     for (Ship theShip : Ships) {
@@ -66,8 +75,6 @@ public static ArrayList<Ship> findShipByPositionX(ArrayList<Ship> Ships, Integer
     }
     return searchResult;
 }
-
-
 
 public static ArrayList<Ship> findShipByPositionRegexX(ArrayList<Ship> Ships, String regexX) {
     ArrayList<Ship> searchResult = new ArrayList<>();
@@ -79,8 +86,37 @@ public static ArrayList<Ship> findShipByPositionRegexX(ArrayList<Ship> Ships, St
     return searchResult;
 }
 
-
 public static void printShip(Ship ship) {
     System.out.println(ship);
+    }
+
+/*@SuppressWarnings("rawtypes")
+public class ShipSortByID implements Comparator {
+    
+ public int compare(Ship id1, Ship id2) {
+     
+     int value = 0;
+     
+     if (Ship.id1.id > Ship.id2.id)
+         value = 1;
+     else if (Ship.id1.id < Ship.id2.id)
+         value = -1;
+     else if (Ship.id1.id > Ship.id2.id)
+         value = 0;
+     
+     return value;
+             
+ }
+*/ 
+
+
+    
 }
+
+
+
+
+
+
+
 }
