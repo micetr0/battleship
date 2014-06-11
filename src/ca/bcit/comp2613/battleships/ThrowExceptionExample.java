@@ -6,6 +6,7 @@ import java.util.Random;
 import com.sun.org.apache.xpath.internal.operations.Equals;
 
 import ca.bcit.comp2613.battleships.model.Marker;
+import ca.bcit.comp2613.battleships.model.markerState;
 import ca.bcit.comp2613.battleships.model.Ship;
 import ca.bcit.comp2613.battleships.util.ShipUtil;
 import ca.bcit.comp2613.battleships.util.MarkerUtil;
@@ -20,7 +21,8 @@ public class ThrowExceptionExample {
     int randInt = rand.nextInt();
     	if (randInt % 10 == 0) {
     		
-    		if (markerResult == "Null");
+    		if (markerState.markerState == markerState.HIT);
+    		
     		throw new MarkerOutofBoundExcemption();
     		
     		System.out.println("generation successful");
@@ -29,7 +31,7 @@ public class ThrowExceptionExample {
     System.out.println("Complete list of marker:" + listOfMarker);
     
     try {
-    	markerResult = markerResult.get((int)(Math.random()*2));
+    	
     } catch (DontKnowHowException e) {
     	e.printStackTrace();
     }

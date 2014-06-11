@@ -28,9 +28,7 @@ public class TestDriver {
         System.out.println("Search by Ship position regex" + shipSearchRegex);
         System.out.println("Search by Ship position " + shipSearchPosition);
         //System.out.println(shipSearch);
-        
-        
-        
+                
    //marker class
         System.out.println("Search by Marker: ");
     	System.out.println(" ");
