@@ -6,8 +6,9 @@ public class Marker {
     private String id;
     private Integer positionX;
     private Integer positionY;
-    private String hit;
-    private String miss;
+
+    //testing enum
+    public markerState markerState;
     
     
     public Marker(String id, Integer positionX, Integer positionY, String hit,String miss) {
@@ -16,8 +17,6 @@ public class Marker {
         this.id = id;
         this.positionX = positionX;
         this.positionY = positionY;
-        this.hit = hit;
-        this.miss = miss;
     }
 
 
@@ -55,32 +54,19 @@ public class Marker {
         this.positionY = positionY;
     }
 
-
-    public String getHit() {
-        return hit;
+    public markerState getRandomHitMiss() {
+        return markerState;
     }
 
-
-    public void setHit(String hit) {
-        this.hit = hit;
+    public void setRandomHitMiss(markerState markerState) {
+     this.markerState = markerState;
     }
 
-
-    public String getMiss() {
-        return miss;
-    }
-
-
-    public void setMiss(String miss) {
-        this.miss = miss;
-    }
-
-
-    @Override
-    public String toString() {
-        return "Marker id=" + id + ", positionX=" + positionX + ", positionY="
-                + positionY + ", hit=" + hit + ", miss=" + miss + "]";
-    }    
+ @Override
+ public String toString() {
+     return "Marker id= " + id + ", positionX= " + positionX + ", positionY= "
+                + positionY + ", Hit or Miss= " + markerState + "]";
+    }   
 
 }
 

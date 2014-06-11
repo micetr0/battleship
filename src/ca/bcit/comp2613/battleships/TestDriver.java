@@ -14,19 +14,19 @@ public class TestDriver {
     //ship class
         ArrayList<Ship> listOfShip = ShipUtil.shipGenerator(100);
         //ArrayList<Ship> shipSearch = ShipUtil.findShipByPosition(listOfShip, 100);
-        ArrayList<Ship> shipEndurance = ShipUtil.findShipByEndurance(listOfShip, 2);
-        ArrayList<Ship> shipSearchRegex = ShipUtil.findShipByPositionRegex(listOfShip, "5");
-        System.out.println(listOfShip);
+        //ArrayList<Ship> shipEndurance = ShipUtil.findShipByEndurance(listOfShip, 2);
+        ArrayList<Ship> shipSearchRegexX = ShipUtil.findShipByPositionRegexX(listOfShip, "5");
+        System.out.println("list: " + listOfShip);
         //System.out.println(shipSearch);
-        System.out.println(shipEndurance);
-        System.out.println(shipSearchRegex);
+        //System.out.println("endurance: " + shipEndurance);
+        System.out.println("find by position x: " +shipSearchRegexX);
         
      //marker class
         ArrayList<Marker> listOfMarker = MarkerUtil.markerGenerator(100);
         System.out.println(listOfMarker);
      //find marker position X
         ArrayList<Marker> markerSearch = MarkerUtil.findMarkerByPositionX(listOfMarker, 6);
-        System.out.println(markerSearch);
+        System.out.println("find by position x: " + markerSearch);
         ArrayList<Marker> markerSearchRegex = MarkerUtil.findMarkerByPositionXRegex(listOfMarker, "10");
         System.out.println(markerSearchRegex);
     }
