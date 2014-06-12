@@ -109,8 +109,34 @@ public class ShipSortByID implements Comparator {
  }
 */ 
 
+public static void ShipIDorder() {
+	
+	Random shipIDorderandom = new Random();
+	
+	ArrayList<Ship> myShips = new ArrayList<>();
+	String randomString = String.valueOf(shipIDorderandom.nextInt(9));	
+	Ship ship1 = new Ship (randomString,2,2,5);
+	randomString = String.valueOf(shipIDorderandom.nextInt(9));
+	Ship ship2 = new Ship (randomString,2,2,5);
+	randomString = String.valueOf(shipIDorderandom.nextInt(9));
+	Ship ship3 = new Ship (randomString,2,2,5);
+	randomString = String.valueOf(shipIDorderandom.nextInt(9));
+	Ship ship4 = new Ship (randomString,2,2,5);
+	
+	
 
-    
+	myShips.add(ship1);
+	myShips.add(ship2);
+	myShips.add(ship3);
+	myShips.add(ship4);
+	
+	Collections.sort(myShips);
+	
+	
+	for (Ship shipIDsort : myShips) {
+		System.out.println(shipIDsort);
+		
+	}
 }
 
 

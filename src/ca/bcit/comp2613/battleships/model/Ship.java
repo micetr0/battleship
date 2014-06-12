@@ -2,7 +2,7 @@ package ca.bcit.comp2613.battleships.model;
 
 import java.util.List;
 
-public class Ship extends Object {
+public class Ship extends Object implements Comparable<Ship>{
 	
 	public String id;
 	private Integer positionX;
@@ -78,7 +78,10 @@ public class Ship extends Object {
               
     }
 
-    
+    public int compareTo (Ship s) {
+    	int retval = this.getId().compareTo(s.getId());
+    	return retval;
+    }
 
 }
 
