@@ -70,9 +70,9 @@ public class Wow {
 	}
 
 	private static int getRandomLevel() {
-		return rand.nextInt(85) + 1; // TODO is this right? org was nextInt(101)
+		return rand.nextInt(86); // TODO is this right? org was nextInt(101)
 										// now
-		// it will start from lvl 1 and end at 100.
+		// it will start from lvl 0 and end at 85.
 	}
 
 	private static int getRandomStrength() {
@@ -158,8 +158,8 @@ public class Wow {
 		Iterator<Character> iterator = characters.iterator();
 		while (iterator.hasNext()) {
 			Character character = iterator.next();
-			if (character.getRace() == Race.PANDAREN) { // TODO not quite right
-														// is it? was Race.DRAENEI
+			if (character.getRace() == Race.PANDAREN) { // TODO copy the loop and added if statement with try catch statement
+										
 				
 				DontHaveTheExpansionException problem = new DontHaveTheExpansionException("error at chracter level: " + character.getLevel());
 				
