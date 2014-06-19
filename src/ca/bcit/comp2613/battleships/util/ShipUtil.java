@@ -9,6 +9,12 @@ import java.util.List;
 import ca.bcit.comp2613.battleships.model.Ship;
 import ca.bcit.comp2613.battleships.model.ShipType;
 
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.type.TypeReference;
+
+import java.io.ByteArrayOutputStream;
+
+
 
 public class ShipUtil {
     
@@ -109,7 +115,7 @@ public class ShipSortByID implements Comparator {
  }
 */ 
 
-public static void ShipIDorder() {
+public static String ShipIDorder() {
 	
 	Random shipIDorderandom = new Random();
 	
@@ -123,8 +129,6 @@ public static void ShipIDorder() {
 	randomString = String.valueOf(shipIDorderandom.nextInt(9));
 	Ship ship4 = new Ship (randomString,2,2,5);
 	
-	
-
 	myShips.add(ship1);
 	myShips.add(ship2);
 	myShips.add(ship3);
@@ -132,17 +136,20 @@ public static void ShipIDorder() {
 	
 	Collections.sort(myShips);
 	
-	
-	for (Ship shipIDsort : myShips) {
-		System.out.println(shipIDsort);
+	ObjectMapper objectMapper = new ObjectMapper();
+	try {
+		ByteArrayOutputStream test = new ByteArrayOutputStream();
+		objectMapper.writeValue(test, myShips);
+		String shipAsJSONString = test.toString();
+		System.out.println(shipAsJSONString);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
-	}
-}
-
-
-
-
-
-
+		for (Ship shipIDsort : myShips) {
+		System.out.println(shipIDsort);
+		}
+	
+  }
 
 }
