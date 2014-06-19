@@ -6,21 +6,29 @@ import ca.bcit.comp2613.battleships.model.Marker;
 import ca.bcit.comp2613.battleships.model.Ship;
 import ca.bcit.comp2613.battleships.util.ShipUtil;
 import ca.bcit.comp2613.battleships.util.MarkerUtil;
-//import ca.bcit.comp2613.coursematerial.day05.Log4jDemo;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 
+
+//import ca.bcit.comp2613.coursematerial.day05.Log4jDemo;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import org.apache.commons.configuration.ConfigurationException;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+import org.apache.commons.configuration.PropertiesConfiguration;
+
 public class TestDriver {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ConfigurationException {
     	
 		Logger log = Logger.getLogger(TestDriver.class);
-    	
-    	
+		PropertiesConfiguration propertiesConfiguration = new PropertiesConfiguration();
+		
+			
+			propertiesConfiguration.load(TestDriver.class.getResourceAsStream("ship_info.properties"));
+			log.info("Boardsize is " + propertiesConfiguration.getString("boardSize1"));
+		
     //ship class
         ArrayList<Ship> listOfShip = ShipUtil.shipGenerator(100);
         
