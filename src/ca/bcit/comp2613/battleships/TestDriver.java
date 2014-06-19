@@ -6,6 +6,10 @@ import ca.bcit.comp2613.battleships.model.Marker;
 import ca.bcit.comp2613.battleships.model.Ship;
 import ca.bcit.comp2613.battleships.util.ShipUtil;
 import ca.bcit.comp2613.battleships.util.MarkerUtil;
+//import ca.bcit.comp2613.coursematerial.day05.Log4jDemo;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -14,28 +18,40 @@ public class TestDriver {
 
     public static void main(String[] args) {
     	
+		Logger log = Logger.getLogger(TestDriver.class);
+    	
+    	
     //ship class
         ArrayList<Ship> listOfShip = ShipUtil.shipGenerator(100);
         
         
-        System.out.println("----Sort By ID...only thats it");
+        //System.out.println("----Sort By ID...only thats it");
+        log.info("----Sort By ID...only thats it");
         ShipUtil.ShipIDorder();
         //ArrayList<Ship> shipSearch = ShipUtil.findShipByPosition(listOfShip, 100);
         //ArrayList<Ship> shipEndurance = ShipUtil.findShipByEndurance(listOfShip, 2);
         ArrayList<Ship> shipSearchRegexX = ShipUtil.findShipByPositionRegexX(listOfShip, "5");
-        System.out.println("list: " + listOfShip);
+        
+        //System.out.println("list: " + listOfShip);
+        log.info("list: " + listOfShip);
+        
         //System.out.println(shipSearch);
         //System.out.println("endurance: " + shipEndurance);
-        System.out.println("find by position x: " +shipSearchRegexX);
+        log.info("find by position x: " +shipSearchRegexX);
+        //System.out.println("find by position x: " +shipSearchRegexX);
         
      //marker class
         ArrayList<Marker> listOfMarker = MarkerUtil.markerGenerator(100);
-        System.out.println(listOfMarker);
+        
+        //System.out.println(listOfMarker);
+        log.info(listOfMarker);
      //find marker position X
         ArrayList<Marker> markerSearch = MarkerUtil.findMarkerByPositionX(listOfMarker, 6);
-        System.out.println("find by position x: " + markerSearch);
+        //System.out.println("find by position x: " + markerSearch);
+        log.info("find by position x: " + markerSearch);
         ArrayList<Marker> markerSearchRegex = MarkerUtil.findMarkerByPositionXRegex(listOfMarker, "10");
-        System.out.println(markerSearchRegex);
+        //System.out.println(markerSearchRegex);
+        log.info(markerSearchRegex);
         
     
         
