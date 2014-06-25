@@ -43,10 +43,10 @@ public class TestDriver {
         //System.out.println("----Sort By ID...only thats it");
         log.info("----Sort By ID...only thats it");
         log.info("changed the output to JSON string type");
-        ShipUtil.ShipIDorder();
+        ShipUtil.shipIDorder();
         
         try {
-			FileUtils.writeStringToFile(new File("sortedShip.txt"), ShipUtil.ShipIDorder());
+			FileUtils.writeStringToFile(new File("sortedShip.txt"), ShipUtil.shipIDorder());
 			System.out.println(FileUtils.readFileToString(new File("sortedShip.txt")));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

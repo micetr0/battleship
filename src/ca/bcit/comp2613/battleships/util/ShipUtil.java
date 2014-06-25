@@ -14,8 +14,6 @@ import org.codehaus.jackson.type.TypeReference;
 
 import java.io.ByteArrayOutputStream;
 
-
-
 public class ShipUtil {
     
     
@@ -115,7 +113,7 @@ public class ShipSortByID implements Comparator {
  }
 */ 
 
-public static String ShipIDorder() {
+public static String shipIDorder() {
 	
 	Random shipIDorderandom = new Random();
 	
