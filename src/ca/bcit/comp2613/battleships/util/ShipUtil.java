@@ -133,12 +133,14 @@ public static String shipIDorder() {
 	myShips.add(ship4);
 	
 	Collections.sort(myShips);
+	String shipAsJSONString = null; 
+			
 	
 	ObjectMapper objectMapper = new ObjectMapper();
 	try {
 		ByteArrayOutputStream test = new ByteArrayOutputStream();
 		objectMapper.writeValue(test, myShips);
-		String shipAsJSONString = test.toString();
+		shipAsJSONString = test.toString();
 		System.out.println(shipAsJSONString);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -147,7 +149,7 @@ public static String shipIDorder() {
 		for (Ship shipIDsort : myShips) {
 		System.out.println(shipIDsort);
 		}
-	
+		return shipAsJSONString;
   }
-
+	
 }

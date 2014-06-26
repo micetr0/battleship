@@ -1,0 +1,1 @@
+[{"id":"2","positionX":2,"positionY":2,"endurance":5,"ShipType":null,"shipType":null},{"id":"2","positionX":2,"positionY":2,"endurance":5,"ShipType":null,"shipType":null},{"id":"2","positionX":2,"positionY":2,"endurance":5,"ShipType":null,"shipType":null},{"id":"7","positionX":2,"positionY":2,"endurance":5,"ShipType":null,"shipType":null}]

@@ -10,8 +10,6 @@ import ca.bcit.comp2613.battleships.util.ShipUtil;
 import ca.bcit.comp2613.battleships.util.MarkerUtil;
 
 
-
-
 //import ca.bcit.comp2613.coursematerial.day05.Log4jDemo;
 import java.util.Collections;
 import java.util.Comparator;
@@ -23,7 +21,6 @@ import org.apache.commons.configuration.PropertiesConfiguration;
 import org.apache.commons.io.FileUtils;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
-
 import java.io.ByteArrayOutputStream;
 
 public class TestDriver {
