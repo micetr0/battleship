@@ -82,6 +82,7 @@ public class Ship extends Object implements Comparable<Ship>{
     	int retval = this.getId().compareTo(s.getId());
     	return retval;
     }
+    
 
 }
 
