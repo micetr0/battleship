@@ -116,9 +116,16 @@ public class ShipSwingApplication {
 	
 	public void doSave() {
 		String id = idTextField.getText();
-		Integer positionX = positionXTextField.getText();
-		Integer positionY = positionYTextField.getText();
-		Integer endurance = enduranceTextField.getText();
+		
+		String positionX = positionXTextField.getText();
+		int xaxis = Integer.parseInt(positionX);
+		
+		String positionY = positionYTextField.getText();
+		int yaxis = Integer.parseInt(positionY);
+		
+		String endurance = enduranceTextField.getText();
+		int endure = Integer.parseInt(endurance);
+		
 		Ship ship = new Ship(id, positionX, positionY, endurance);
 		ShipUtil.save(ships, ship);
 		//table.clearSelection();
