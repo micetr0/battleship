@@ -5,10 +5,11 @@ import java.util.Comparator;
 import java.util.Random;
 import java.util.Collections;
 import java.util.List;
+import java.util.Iterator;
 
 import ca.bcit.comp2613.battleships.model.Ship;
 import ca.bcit.comp2613.battleships.model.ShipType;
-import ca.bcit.comp2613.coursematerial.day06.model.Teacher;
+
 
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
@@ -128,7 +129,16 @@ public class ShipUtil {
 		}
 	}
 
-	
+	public static void delete(List<Ship> ships, Ship ship){
+		Iterator<Ship> iter = ships.iterator();
+		while(iter.hasNext()) {
+			Ship shipLoop = iter.next();
+			if(shipLoop.getId().equals(ship.getId())) {
+			iter.remove();
+			break;
+			}
+		}	
+	}
 	
 	
 }

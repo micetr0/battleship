@@ -112,8 +112,6 @@ public class ShipSwingApplication {
 		} catch (Exception e) {}
 	}
 	
-	//stopped here//
-	
 	public void doSave() {
 		String id = idTextField.getText();
 		
@@ -126,16 +124,17 @@ public class ShipSwingApplication {
 		String endurance = enduranceTextField.getText();
 		int endure = Integer.parseInt(endurance);
 		
-		Ship ship = new Ship(id, positionX, positionY, endurance);
+		Ship ship = new Ship(id, xaxis, yaxis, endure);
 		ShipUtil.save(ships, ship);
 		//table.clearSelection();
 		refreshTable();
 	}
 	
+	//stopped here. need to add doDelete() method in ShipUtil
 	public void doDelete() {
 		String id = idTextField.getText();
-		Ship teacher = new Ship( id, null, null, null);
-		TeacherUtil.delete(teachers, teacher);
+		Ship ship = new Ship( id, xaxis, yaxis, endure);
+		ShipUtil.delete(ships, ship);
 		refreshTable();
 	}
 	
