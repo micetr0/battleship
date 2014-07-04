@@ -74,10 +74,10 @@ public class TestDriver {
         log.info("find by position x: " + markerSearch);
         ArrayList<Marker> markerSearchRegex = MarkerUtil.findMarkerByPositionXRegex(listOfMarker, "10");
         //System.out.println(markerSearchRegex);
-        log.info(markerSearchRegex);
-    
-        
+        log.info(markerSearchRegex);    
     }
+    
+    
 
 
     

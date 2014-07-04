@@ -8,6 +8,7 @@ import java.util.List;
 
 import ca.bcit.comp2613.battleships.model.Ship;
 import ca.bcit.comp2613.battleships.model.ShipType;
+import ca.bcit.comp2613.coursematerial.day06.model.Teacher;
 
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
@@ -108,4 +109,26 @@ public class ShipUtil {
 		}
 		return searchResult;
 	}
+	
+	//assign6
+	
+	public static void save(List<Ship> ships, Ship ship) {
+		boolean foundUpdate = false;
+		for (Ship shipLoop : ships) {
+			if (shipLoop.getId().equals(ship.getId())) {
+				shipLoop.setPositionX(ship.getPositionX());
+				shipLoop.setPositionY(ship.getPositionY());
+				shipLoop.setEndurance(ship.getEndurance());
+				foundUpdate = true;
+				break;
+			}
+		}
+		if (!foundUpdate) { // do an insert
+			ships.add(ship);
+		}
+	}
+
+	
+	
+	
 }

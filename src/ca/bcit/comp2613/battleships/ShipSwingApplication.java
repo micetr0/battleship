@@ -45,10 +45,12 @@ public class ShipSwingApplication {
 
 	private JFrame frame;
 	private JTable table;
-	private JTextField firstNameTextField;
-	private JTextField lastNameTextField;
+	private JTextField positionXTextField;
+	private JTextField positionYTextField;
+	private JTextField enduranceTextField;
 	private JLabel lblLastName;
 	private JLabel lblId;
+	private JLabel lblEndurance;
 	private SwingShipModel swingShipModel;
 	public String[] columnNames = new String[] { "id", "First Name",
 			"Last Name" };
@@ -101,10 +103,12 @@ public class ShipSwingApplication {
 		try {
 			idTextField.setText(table.getModel()
 					.getValueAt(table.getSelectedRow(), 0).toString());
-			firstNameTextField.setText(table.getModel()
+			positionXTextField.setText(table.getModel()
 					.getValueAt(table.getSelectedRow(), 1).toString());
-			lastNameTextField.setText(table.getModel()
+			positionYTextField.setText(table.getModel()
 					.getValueAt(table.getSelectedRow(), 2).toString());
+			enduranceTextField.setText(table.getModel()
+					.getValueAt(table.getSelectedRow(), 3).toString());
 		} catch (Exception e) {}
 	}
 	
@@ -112,17 +116,18 @@ public class ShipSwingApplication {
 	
 	public void doSave() {
 		String id = idTextField.getText();
-		String firstName = firstNameTextField.getText();
-		String lastName = lastNameTextField.getText();
-		Teacher teacher = new Teacher(id, firstName, lastName);
-		TeacherUtil.save(teachers, teacher);
+		Integer positionX = positionXTextField.getText();
+		Integer positionY = positionYTextField.getText();
+		Integer endurance = enduranceTextField.getText();
+		Ship ship = new Ship(id, positionX, positionY, endurance);
+		ShipUtil.save(ships, ship);
 		//table.clearSelection();
 		refreshTable();
 	}
 	
 	public void doDelete() {
 		String id = idTextField.getText();
-		Teacher teacher = new Teacher(id, null, null);
+		Ship teacher = new Ship( id, null, null, null);
 		TeacherUtil.delete(teachers, teacher);
 		refreshTable();
 	}
