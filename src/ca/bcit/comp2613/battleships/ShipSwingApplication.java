@@ -52,8 +52,8 @@ public class ShipSwingApplication {
 	private JLabel lblId;
 	private JLabel lblEndurance;
 	private SwingShipModel swingShipModel;
-	public String[] columnNames = new String[] { "id", "First Name",
-			"Last Name" };
+	public String[] columnNames = new String[] { "id", "Position X",
+			"Position Y", "Endurance" };
 	private JTextField idTextField;
 	public static List<Ship> ships;
 
@@ -133,7 +133,17 @@ public class ShipSwingApplication {
 	//stopped here. need to add doDelete() method in ShipUtil
 	public void doDelete() {
 		String id = idTextField.getText();
-		Ship ship = new Ship( id, xaxis, yaxis, endure);
+		
+		String positionX = positionXTextField.getText();
+		int xaxis = Integer.parseInt(positionX);
+		
+		String positionY = positionYTextField.getText();
+		int yaxis = Integer.parseInt(positionY);
+		
+		String endurance = enduranceTextField.getText();
+		int endure = Integer.parseInt(endurance);
+		
+		Ship ship = new Ship(id, xaxis, yaxis, endure);
 		ShipUtil.delete(ships, ship);
 		refreshTable();
 	}
@@ -141,23 +151,25 @@ public class ShipSwingApplication {
 	public void doNew() {
 		String id = UUID.randomUUID().toString();
 		idTextField.setText(id);
-		firstNameTextField.setText("");
-		lastNameTextField.setText("");
+		positionXTextField.setText("");
+		positionYTextField.setText("");
+		enduranceTextField.setText("");
 	}
 
 	private void refreshTable() {
 		// swingTeacherModel = new SwingTeacherModel();
 		Object[][] data = null;
 
-		data = new Object[teachers.size()][3];
+		data = new Object[ships.size()][4];
 		int i = 0;
-		for (Teacher teacher : teachers) {
-			data[i][0] = teacher.getId();
-			data[i][1] = teacher.getFirstName();
-			data[i][2] = teacher.getLastName();
+		for (Ship ship : ships) {
+			data[i][0] = ship.getId();
+			data[i][1] = ship.getPositionX();
+			data[i][2] = ship.getPositionY();
+			data[i][3] = ship.getEndurance();
 			i++;
 		}
-		swingTeacherModel.setDataVector(data, columnNames);
+		swingShipModel.setDataVector(data, columnNames);
 		table.repaint();
 	}
 
@@ -171,9 +183,9 @@ public class ShipSwingApplication {
 		frame.getContentPane().setLayout(null);
 
 		// table = new JTable();
-		swingTeacherModel = new SwingTeacherModel();
+		swingShipModel = new SwingShipModel();
 
-		table = new JTable(swingTeacherModel);
+		table = new JTable(swingShipModel);
 
 		// table.setPreferredScrollableViewportSize(new Dimension(500, 70));
 		// table.setBounds(0, 11, 585, 247);
@@ -188,15 +200,22 @@ public class ShipSwingApplication {
 		lblFirstName.setBounds(44, 330, 103, 14);
 		frame.getContentPane().add(lblFirstName);
 
-		firstNameTextField = new JTextField();
-		firstNameTextField.setBounds(159, 327, 325, 20);
-		frame.getContentPane().add(firstNameTextField);
-		firstNameTextField.setColumns(10);
+		positionXTextField = new JTextField();
+		positionXTextField.setBounds(159, 327, 325, 20);
+		frame.getContentPane().add(positionXTextField);
+		positionXTextField.setColumns(10);
 
-		lastNameTextField = new JTextField();
-		lastNameTextField.setBounds(159, 371, 325, 20);
-		frame.getContentPane().add(lastNameTextField);
-		lastNameTextField.setColumns(10);
+		positionYTextField = new JTextField();
+		positionYTextField.setBounds(159, 371, 325, 20);
+		frame.getContentPane().add(positionYTextField);
+		positionYTextField.setColumns(10);
+		
+		enduranceTextField = new JTextField();
+		enduranceTextField.setBounds(159, 371, 325, 20); //need to play with the numbers
+		frame.getContentPane().add(enduranceTextField);
+		enduranceTextField.setColumns(10);
+		
+		//user input section begins
 
 		lblLastName = new JLabel("Last Name");
 		lblLastName.setBounds(44, 374, 77, 14);
