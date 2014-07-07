@@ -48,7 +48,8 @@ public class ShipSwingApplication {
 	private JTextField positionXTextField;
 	private JTextField positionYTextField;
 	private JTextField enduranceTextField;
-	private JLabel lblLastName;
+	private JLabel lblPositionX;
+	private JLabel lblPositionY;
 	private JLabel lblId;
 	private JLabel lblEndurance;
 	private SwingShipModel swingShipModel;
@@ -195,10 +196,10 @@ public class ShipSwingApplication {
 		frame.getContentPane().add(scrollPane);
 		// scrollPane.add(table);
 		// frame.getContentPane().add(table);
-
-		JLabel lblFirstName = new JLabel("First Name");
-		lblFirstName.setBounds(44, 330, 103, 14);
-		frame.getContentPane().add(lblFirstName);
+		
+		lblPositionX = new JLabel("X Coordinate");
+		lblPositionX.setBounds(44, 330, 103, 14);
+		frame.getContentPane().add(lblPositionX);
 
 		positionXTextField = new JTextField();
 		positionXTextField.setBounds(159, 327, 325, 20);
@@ -217,9 +218,9 @@ public class ShipSwingApplication {
 		
 		//user input section begins
 
-		lblLastName = new JLabel("Last Name");
-		lblLastName.setBounds(44, 374, 77, 14);
-		frame.getContentPane().add(lblLastName);
+		lblPositionY = new JLabel("Y Coordinate");
+		lblPositionY.setBounds(44, 374, 77, 14);
+		frame.getContentPane().add(lblPositionY);
 
 		lblId = new JLabel("id");
 		lblId.setBounds(44, 288, 46, 14);
