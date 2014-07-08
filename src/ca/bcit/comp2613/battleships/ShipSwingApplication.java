@@ -48,13 +48,16 @@ public class ShipSwingApplication {
 	private JTextField positionXTextField;
 	private JTextField positionYTextField;
 	private JTextField enduranceTextField;
+	private JTextField shipTypeTextField;
 	private JLabel lblPositionX;
 	private JLabel lblPositionY;
 	private JLabel lblId;
 	private JLabel lblEndurance;
+	private JLabel lblshipType;
+	
 	private SwingShipModel swingShipModel;
 	public String[] columnNames = new String[] { "id", "Position X",
-			"Position Y", "Endurance" };
+			"Position Y", "Endurance", "Ship Type" };
 	private JTextField idTextField;
 	public static List<Ship> ships;
 
@@ -110,6 +113,8 @@ public class ShipSwingApplication {
 					.getValueAt(table.getSelectedRow(), 2).toString());
 			enduranceTextField.setText(table.getModel()
 					.getValueAt(table.getSelectedRow(), 3).toString());
+			shipTypeTextField.setText(table.getModel()
+					.getValueAt(table.getSelectedRow(), 4).toString());
 		} catch (Exception e) {}
 	}
 	
@@ -124,6 +129,10 @@ public class ShipSwingApplication {
 		
 		String endurance = enduranceTextField.getText();
 		int endure = Integer.parseInt(endurance);
+		
+		//dependent on endurance
+		String shipType = shipTypeTextField.getText();
+		
 		
 		Ship ship = new Ship(id, xaxis, yaxis, endure);
 		ShipUtil.save(ships, ship);
@@ -143,6 +152,9 @@ public class ShipSwingApplication {
 		String endurance = enduranceTextField.getText();
 		int endure = Integer.parseInt(endurance);
 		
+		//dependent on endurance
+		String shipType = shipTypeTextField.getText();
+		
 		Ship ship = new Ship(id, xaxis, yaxis, endure);
 		ShipUtil.delete(ships, ship);
 		refreshTable();
@@ -154,19 +166,22 @@ public class ShipSwingApplication {
 		positionXTextField.setText("");
 		positionYTextField.setText("");
 		enduranceTextField.setText("");
+		//will be a drop-box
+		shipTypeTextField.setText("");
 	}
 
 	private void refreshTable() {
 		// swingTeacherModel = new SwingTeacherModel();
 		Object[][] data = null;
 
-		data = new Object[ships.size()][4];
+		data = new Object[ships.size()][5];
 		int i = 0;
 		for (Ship ship : ships) {
 			data[i][0] = ship.getId();
 			data[i][1] = ship.getPositionX();
 			data[i][2] = ship.getPositionY();
 			data[i][3] = ship.getEndurance();
+			data[i][4] = ship.getShipType();
 			i++;
 		}
 		swingShipModel.setDataVector(data, columnNames);
@@ -215,8 +230,13 @@ public class ShipSwingApplication {
 		frame.getContentPane().add(enduranceTextField);
 		enduranceTextField.setColumns(10);
 		
+		shipTypeTextField = new JTextField();
+		shipTypeTextField.setBounds(159, 371, 325, 20); //need to play with the numbers
+		frame.getContentPane().add(shipTypeTextField);
+		shipTypeTextField.setColumns(10);		
+		
 		//user input section begins
-
+		//STOP here. need to work in the input button for shipType
 		lblPositionY = new JLabel("Y Coordinate");
 		lblPositionY.setBounds(44, 374, 77, 14);
 		frame.getContentPane().add(lblPositionY);

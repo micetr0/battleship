@@ -31,15 +31,20 @@ public class ShipUtil {
 			ship.setPositionX(generator.nextInt(20));
 			ship.setPositionY(generator.nextInt(20));
 
+			//to do: fix ship type generator to range 2-5 only
 			shipTypeAssign = generator.nextInt(5) + 2;
 			if (shipTypeAssign == 2) {
 				ship.setShipType(ShipType.DESTROYER);
+				ship.setEndurance(2);
 			} else if (shipTypeAssign == 3) {
 				ship.setShipType(ShipType.SUBMARINE);
+				ship.setEndurance(3);
 			} else if (shipTypeAssign == 4) {
 				ship.setShipType(ShipType.BATTLESHIP);
+				ship.setEndurance(4);
 			} else if (shipTypeAssign == 5) {
 				ship.setShipType(ShipType.CARRIER);
+				ship.setEndurance(5);
 			}
 			shipArray.add(ship);
 		}
@@ -50,6 +55,7 @@ public class ShipUtil {
 		System.out.println(ship);
 	}
 
+	//adding ship in orders from largest to small using collection and comparator
 	public static String shipIDorder() {
 	
 	Random shipIDorderandom = new Random();
