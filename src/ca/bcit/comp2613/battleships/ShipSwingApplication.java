@@ -131,7 +131,6 @@ public class ShipSwingApplication {
 		refreshTable();
 	}
 	
-	//stopped here. need to add doDelete() method in ShipUtil
 	public void doDelete() {
 		String id = idTextField.getText();
 		

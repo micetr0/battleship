@@ -44,7 +44,7 @@ public class Ship extends Object implements Comparable<Ship>{
     }
 
     public Integer getPositionY() {
-        return positionX;
+        return positionY;
     }
 
     public void setPositionY(Integer positionY) {
