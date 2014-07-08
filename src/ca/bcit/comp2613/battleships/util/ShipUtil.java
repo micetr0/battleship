@@ -32,7 +32,7 @@ public class ShipUtil {
 			ship.setPositionY(generator.nextInt(20));
 
 			//to do: fix ship type generator to range 2-5 only
-			shipTypeAssign = generator.nextInt(5) + 2;
+			shipTypeAssign = generator.nextInt(4) + 2;
 			if (shipTypeAssign == 2) {
 				ship.setShipType(ShipType.DESTROYER);
 				ship.setEndurance(2);
