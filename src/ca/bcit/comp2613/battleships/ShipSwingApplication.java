@@ -133,7 +133,6 @@ public class ShipSwingApplication {
 		//dependent on endurance
 		String shipType = shipTypeTextField.getText();
 		
-		
 		Ship ship = new Ship(id, xaxis, yaxis, endure);
 		ShipUtil.save(ships, ship);
 		//table.clearSelection();
@@ -193,7 +192,7 @@ public class ShipSwingApplication {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 601, 499);
+		frame.setBounds(100, 100, 601, 550);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 
@@ -240,6 +239,16 @@ public class ShipSwingApplication {
 		lblPositionY = new JLabel("Y Coordinate");
 		lblPositionY.setBounds(44, 374, 77, 14);
 		frame.getContentPane().add(lblPositionY);
+		
+		lblEndurance = new JLabel("Endurance");
+		lblEndurance.setBounds(44,374,77,34);
+		frame.getContentPane().add(lblEndurance);
+	
+		lblshipType = new JLabel("Ship Types");
+		lblshipType.setBounds(44,374,77,64);
+		frame.getContentPane().add(lblshipType);
+		
+		//INPUT STOP
 
 		lblId = new JLabel("id");
 		lblId.setBounds(44, 288, 46, 14);
