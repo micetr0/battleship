@@ -187,6 +187,7 @@ public class ShipSwingApplication {
 		table.repaint();
 	}
 
+	
 	/**
 	 * Initialize the contents of the frame.
 	 */
