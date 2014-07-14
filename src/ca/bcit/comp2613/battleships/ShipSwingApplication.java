@@ -248,7 +248,8 @@ public class ShipSwingApplication {
 		lblshipType.setBounds(44,374,77,64);
 		frame.getContentPane().add(lblshipType);
 		
-		//INPUT STOP
+		//INPUT STOP!
+		
 
 		lblId = new JLabel("id");
 		lblId.setBounds(44, 288, 46, 14);
