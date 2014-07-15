@@ -168,6 +168,11 @@ public class ShipSwingApplication {
 		//will be a drop-box
 		shipTypeTextField.setText("");
 	}
+	
+	public void viewAllShips() {
+		ShipFrame shipFrame = new shipFrame();
+		shipFrame.setVisible(true);
+	}
 
 	private void refreshTable() {
 		// swingTeacherModel = new SwingTeacherModel();
@@ -286,6 +291,32 @@ public class ShipSwingApplication {
 		idTextField.setBounds(159, 285, 325, 20);
 		frame.getContentPane().add(idTextField);
 		idTextField.setColumns(10);
+		
+		btnViewAllShips = new Jbutton("View all ships");
+		btnViewAllShips.addActionListener(new ActionListener() {
+			public void actionPerformed (ActionEvent e) {
+				viewAllShips();
+			}
+		});
+		btnViewAllShips.setBounds(0,260,121,23);
+		frame.getContentPane().add(btnViewAllStudents);
+		
+		btnViewGroup = new JButton("View Group");
+		btnViewGroup.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				viewClass();
+			}
+		});
+		btnViewGroup.setBond(300, 412, 144, 23);
+		frame.getContntPane().add(btnViewGroup);
+		
+	   }
+	   //close initialize()
+	 //ViewClass == ViewGroup
+		
+		
+		
+		//LINE 232 cont. 
 	}
 	
 	
