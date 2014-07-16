@@ -169,11 +169,6 @@ public class ShipSwingApplication {
 		shipTypeTextField.setText("");
 	}
 	
-	public void viewAllShips() {
-		ShipFrame shipFrame = new shipFrame();
-		shipFrame.setVisible(true);
-	}
-
 	private void refreshTable() {
 		// swingTeacherModel = new SwingTeacherModel();
 		Object[][] data = null;
@@ -197,7 +192,7 @@ public class ShipSwingApplication {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 601, 550);
+		frame.setBounds(100, 100, 601, 630);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 
@@ -230,12 +225,12 @@ public class ShipSwingApplication {
 		positionYTextField.setColumns(10);
 		
 		enduranceTextField = new JTextField();
-		enduranceTextField.setBounds(159, 371, 325, 20); //need to play with the numbers
+		enduranceTextField.setBounds(159, 415, 325, 20); //need to play with the numbers
 		frame.getContentPane().add(enduranceTextField);
 		enduranceTextField.setColumns(10);
 		
 		shipTypeTextField = new JTextField();
-		shipTypeTextField.setBounds(159, 371, 325, 20); //need to play with the numbers
+		shipTypeTextField.setBounds(159, 459, 325, 20); //need to play with the numbers
 		frame.getContentPane().add(shipTypeTextField);
 		shipTypeTextField.setColumns(10);		
 		
@@ -246,11 +241,11 @@ public class ShipSwingApplication {
 		frame.getContentPane().add(lblPositionY);
 		
 		lblEndurance = new JLabel("Endurance");
-		lblEndurance.setBounds(44,374,77,34);
+		lblEndurance.setBounds(44,408,77,34);
 		frame.getContentPane().add(lblEndurance);
 	
 		lblshipType = new JLabel("Ship Types");
-		lblshipType.setBounds(44,374,77,64);
+		lblshipType.setBounds(44,452,77,34);
 		frame.getContentPane().add(lblshipType);
 		
 		//INPUT STOP
@@ -259,13 +254,14 @@ public class ShipSwingApplication {
 		lblId.setBounds(44, 288, 46, 14);
 		frame.getContentPane().add(lblId);
 
+		//BUTTONS
 		JButton btnSave = new JButton("Save");
 		btnSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				doSave();
 			}
 		});
-		btnSave.setBounds(44, 412, 89, 23);
+		btnSave.setBounds(44, 520, 89, 23);
 		frame.getContentPane().add(btnSave);
 
 		JButton btnDelete = new JButton("Delete");
@@ -274,7 +270,7 @@ public class ShipSwingApplication {
 				doDelete();
 			}
 		});
-		btnDelete.setBounds(169, 412, 89, 23);
+		btnDelete.setBounds(169, 520, 89, 23);
 		frame.getContentPane().add(btnDelete);
 
 		JButton btnNewButton = new JButton("New");
@@ -291,36 +287,12 @@ public class ShipSwingApplication {
 		idTextField.setBounds(159, 285, 325, 20);
 		frame.getContentPane().add(idTextField);
 		idTextField.setColumns(10);
-		
-		btnViewAllShips = new Jbutton("View all ships");
-		btnViewAllShips.addActionListener(new ActionListener() {
-			public void actionPerformed (ActionEvent e) {
-				viewAllShips();
-			}
-		});
-		btnViewAllShips.setBounds(0,260,121,23);
-		frame.getContentPane().add(btnViewAllStudents);
-		
-		btnViewGroup = new JButton("View Group");
-		btnViewGroup.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				viewClass();
-			}
-		});
-		btnViewGroup.setBond(300, 412, 144, 23);
-		frame.getContntPane().add(btnViewGroup);
-		
 	   }
 	   //close initialize()
-	 //ViewClass == ViewGroup
 		
-		
-		
-		//LINE 232 cont. test
 	}
 	
 	
 	
 	
 
-}
