@@ -2,8 +2,13 @@ package ca.bcit.comp2613.battleships.model;
 
 import java.util.List;
 
-public class Ship extends Object implements Comparable<Ship>{
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Ship {
 	
+    @Id
 	public String id;
 	private Integer positionX;
 	private Integer positionY;
