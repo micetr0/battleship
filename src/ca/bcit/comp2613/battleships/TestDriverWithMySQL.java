@@ -7,8 +7,10 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ImportResource;
 
+import ca.bcit.comp2613.battleships.model.Board;
 import ca.bcit.comp2613.battleships.model.Ship;
 import ca.bcit.comp2613.battleships.model.ShipType;
+import ca.bcit.comp2613.battleships.repository.BoardRepository;
 import ca.bcit.comp2613.battleships.repository.ShipRepository;
 import ca.bcit.comp2613.battleships.util.ShipUtil;
 
@@ -21,9 +23,12 @@ public class TestDriverWithMySQL {
         ConfigurableApplicationContext context = SpringApplication.run(TestDriverWithMySQL.class);
         
         ShipRepository shipRepository = context.getBean(ShipRepository.class);
+        BoardRepository boardRepository = context.getBean(BoardRepository.class);
         
         Random generator = new Random();
-
+        
+        Board board = new Board();
+        boardRepository.save(board);
         int shipTypeAssign = 0;
 
         for (int i = 0; i < 10; i++) {
