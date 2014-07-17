@@ -1,5 +1,6 @@
 package ca.bcit.comp2613.battleships;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import org.springframework.boot.SpringApplication;
@@ -28,11 +29,12 @@ public class TestDriverWithMySQL {
         Random generator = new Random();
         //
         Board board = new Board();
-        boardRepository.save(board);
+                
         int shipTypeAssign = 0;
-
+        ArrayList<Ship> ships = new ArrayList<Ship>();
         for (int i = 0; i < 10; i++) {
             Ship ship = new Ship();
+            ships.add(ship);
             ship.setId(Integer.toString(i));
             ship.setPositionX(generator.nextInt(20));
             ship.setPositionY(generator.nextInt(20));
@@ -53,6 +55,10 @@ public class TestDriverWithMySQL {
             }
             shipRepository.save(ship);
         }
+        
+        board.setShips(ships);
+        boardRepository.save(board);
+        
         Ship ship = shipRepository.findOne("2");
         System.out.println(ship);
     }

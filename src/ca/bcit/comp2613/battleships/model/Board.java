@@ -62,7 +62,15 @@ public class Board {
     }
     
     
-    @Override
+    public List<Ship> getShips() {
+		return ships;
+	}
+
+	public void setShips(List<Ship> ships) {
+		this.ships = ships;
+	}
+
+	@Override
     public String toString() {
         return "Board [boardId=" + id + ", gridX=" + gridX + ", gridY="
                 + gridY + "]";

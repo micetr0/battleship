@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 
@@ -16,8 +17,8 @@ public class Ship {
 	private Integer positionY;
 	private Integer endurance;
 	public ShipType ShipType;
-//	@OneToMany
-//	private List <Board> boards;
+	@ManyToOne
+	private Board board;
 	
 	//not required because its build-in
 	public Ship() {}
