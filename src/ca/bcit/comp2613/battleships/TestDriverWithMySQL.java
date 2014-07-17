@@ -26,7 +26,7 @@ public class TestDriverWithMySQL {
 
         int shipTypeAssign = 0;
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 10; i++) {
             Ship ship = new Ship();
             ship.setId(Integer.toString(i));
             ship.setPositionX(generator.nextInt(20));
@@ -48,6 +48,7 @@ public class TestDriverWithMySQL {
             }
             shipRepository.save(ship);
         }
-        
+        Ship ship = shipRepository.findOne("2");
+        System.out.println(ship);
     }
 }

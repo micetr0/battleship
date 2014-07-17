@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 @Entity
 public class Ship {
@@ -14,6 +15,7 @@ public class Ship {
 	private Integer positionY;
 	private Integer endurance;
 	public ShipType ShipType;
+	@Transient
 	private List <Board> boards;
 	
 	//not required because its build-in
@@ -79,7 +81,7 @@ public class Ship {
     public String toString() {
         // TODO Auto-generated method stub
         //removed endurance
-        return "ship id: " + id + " position x: " + positionX +  " position y: " + positionY + " ship type: " + ShipType; 
+        return "ship id: " + id + " position x: " + positionX +  " position y: " + positionY + " ship type: " + ShipType + " Endurance: " + endurance;
               
     }
 
