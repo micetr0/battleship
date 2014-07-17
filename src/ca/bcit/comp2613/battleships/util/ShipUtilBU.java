@@ -9,8 +9,6 @@ import java.util.List;
 import ca.bcit.comp2613.battleships.model.Ship;
 import ca.bcit.comp2613.battleships.model.ShipType;
 
-import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.type.TypeReference;
 
 import java.io.ByteArrayOutputStream;
 
@@ -113,43 +111,43 @@ public class ShipSortByID implements Comparator {
  }
 */ 
 
-public static String shipIDorder() {
-	
-	Random shipIDorderandom = new Random();
-	
-	ArrayList<Ship> myShips = new ArrayList<>();
-	String randomString = String.valueOf(shipIDorderandom.nextInt(9));
-	Ship ship1 = new Ship (randomString,2,2,5);
-	randomString = String.valueOf(shipIDorderandom.nextInt(9));
-	Ship ship2 = new Ship (randomString,2,2,5);
-	randomString = String.valueOf(shipIDorderandom.nextInt(9));
-	Ship ship3 = new Ship (randomString,2,2,5);
-	randomString = String.valueOf(shipIDorderandom.nextInt(9));
-	Ship ship4 = new Ship (randomString,2,2,5);
-	
-	myShips.add(ship1);
-	myShips.add(ship2);
-	myShips.add(ship3);
-	myShips.add(ship4);
-	
-	Collections.sort(myShips);
-	String shipAsJSONString = null; 
-			
-	
-	ObjectMapper objectMapper = new ObjectMapper();
-	try {
-		ByteArrayOutputStream test = new ByteArrayOutputStream();
-		objectMapper.writeValue(test, myShips);
-		shipAsJSONString = test.toString();
-		System.out.println(shipAsJSONString);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		for (Ship shipIDsort : myShips) {
-		System.out.println(shipIDsort);
-		}
-		return shipAsJSONString;
-  }
-	
+//public static String shipIDorder() {
+//	
+//	Random shipIDorderandom = new Random();
+//	
+//	ArrayList<Ship> myShips = new ArrayList<>();
+//	String randomString = String.valueOf(shipIDorderandom.nextInt(9));
+//	Ship ship1 = new Ship (randomString,2,2,5);
+//	randomString = String.valueOf(shipIDorderandom.nextInt(9));
+//	Ship ship2 = new Ship (randomString,2,2,5);
+//	randomString = String.valueOf(shipIDorderandom.nextInt(9));
+//	Ship ship3 = new Ship (randomString,2,2,5);
+//	randomString = String.valueOf(shipIDorderandom.nextInt(9));
+//	Ship ship4 = new Ship (randomString,2,2,5);
+//	
+//	myShips.add(ship1);
+//	myShips.add(ship2);
+//	myShips.add(ship3);
+//	myShips.add(ship4);
+//	
+//	Collections.sort(myShips);
+//	String shipAsJSONString = null; 
+//			
+//	
+//	ObjectMapper objectMapper = new ObjectMapper();
+//	try {
+//		ByteArrayOutputStream test = new ByteArrayOutputStream();
+//		objectMapper.writeValue(test, myShips);
+//		shipAsJSONString = test.toString();
+//		System.out.println(shipAsJSONString);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		
+//		for (Ship shipIDsort : myShips) {
+//		System.out.println(shipIDsort);
+//		}
+//		return shipAsJSONString;
+//  }
+//	
 }
