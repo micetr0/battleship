@@ -26,7 +26,7 @@ public class TestDriverWithMySQL {
         BoardRepository boardRepository = context.getBean(BoardRepository.class);
         
         Random generator = new Random();
-        
+        //
         Board board = new Board();
         boardRepository.save(board);
         int shipTypeAssign = 0;
