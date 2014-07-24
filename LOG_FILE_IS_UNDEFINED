@@ -237,3 +237,65 @@ Error starting ApplicationContext. To display the auto-configuration report enab
 2014-07-23 18:32:49.145  INFO 6928 [Thread-1] --- s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@6af3a631: startup date [Wed Jul 23 18:32:36 PDT 2014]; root of context hierarchy
 2014-07-23 18:32:49.148  INFO 6928 [Thread-1] --- o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
 2014-07-23 18:32:49.156  INFO 6928 [Thread-1] --- j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2014-07-23 19:42:43.344  INFO 1692 [main] --- c.b.c.battleships.TestDriverWithMySQL    : Starting TestDriverWithMySQL on w7-Will_lap-PC with PID 1692 (C:\Users\w7-Will_lap\git\battleship\target\classes started by w7-Will_lap in C:\Users\w7-Will_lap\git\battleship)
+2014-07-23 19:42:43.487  INFO 1692 [main] --- s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6af3a631: startup date [Wed Jul 23 19:42:43 PDT 2014]; root of context hierarchy
+2014-07-23 19:42:44.691  INFO 1692 [main] --- o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [applicationContext.xml]
+2014-07-23 19:42:47.692  INFO 1692 [main] --- o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2014-07-23 19:42:48.731  INFO 1692 [main] --- j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2014-07-23 19:42:55.338  INFO 1692 [main] --- o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2014-07-23 19:42:55.400  INFO 1692 [main] --- c.b.c.battleships.TestDriverWithMySQL    : Started TestDriverWithMySQL in 13.485 seconds (JVM running for 15.091)
+2014-07-23 19:42:55.602  INFO 1692 [Thread-1] --- s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@6af3a631: startup date [Wed Jul 23 19:42:43 PDT 2014]; root of context hierarchy
+2014-07-23 19:42:55.605  INFO 1692 [Thread-1] --- o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2014-07-23 19:42:55.611  INFO 1692 [Thread-1] --- j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2014-07-23 20:17:21.624  INFO 7128 [main] --- c.b.c.battleships.TestDriverWithMySQL    : Starting TestDriverWithMySQL on w7-Will_lap-PC with PID 7128 (C:\Users\w7-Will_lap\git\battleship\target\classes started by w7-Will_lap in C:\Users\w7-Will_lap\git\battleship)
+2014-07-23 20:17:21.882  INFO 7128 [main] --- s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@627096dc: startup date [Wed Jul 23 20:17:21 PDT 2014]; root of context hierarchy
+2014-07-23 20:17:23.059  INFO 7128 [main] --- o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [applicationContext.xml]
+2014-07-23 20:17:25.918  INFO 7128 [main] --- o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2014-07-23 20:17:27.044  INFO 7128 [main] --- j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2014-07-23 20:17:33.213  INFO 7128 [main] --- o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2014-07-23 20:17:33.310  INFO 7128 [main] --- c.b.c.battleships.TestDriverWithMySQL    : Started TestDriverWithMySQL in 12.981 seconds (JVM running for 14.433)
+2014-07-23 20:17:58.805  INFO 4548 [main] --- c.b.c.battleships.TestDriverWithMySQL    : Starting TestDriverWithMySQL on w7-Will_lap-PC with PID 4548 (C:\Users\w7-Will_lap\git\battleship\target\classes started by w7-Will_lap in C:\Users\w7-Will_lap\git\battleship)
+2014-07-23 20:17:58.969  INFO 4548 [main] --- s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7e366c7: startup date [Wed Jul 23 20:17:58 PDT 2014]; root of context hierarchy
+2014-07-23 20:18:04.076  INFO 4548 [main] --- j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2014-07-23 20:18:10.819  INFO 4548 [main] --- o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2014-07-23 20:18:10.876  INFO 4548 [main] --- c.b.c.battleships.TestDriverWithMySQL    : Started TestDriverWithMySQL in 13.506 seconds (JVM running for 15.35)
+2014-07-23 20:18:12.403  INFO 4548 [Thread-1] --- s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7e366c7: startup date [Wed Jul 23 20:17:58 PDT 2014]; root of context hierarchy
+2014-07-23 20:18:12.407  INFO 4548 [Thread-1] --- o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2014-07-23 20:18:12.411  INFO 4548 [Thread-1] --- j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2014-07-23 20:20:29.642  INFO 7092 [main] --- c.b.c.battleships.TestDriverWithMySQL    : Starting TestDriverWithMySQL on w7-Will_lap-PC with PID 7092 (C:\Users\w7-Will_lap\git\battleship\target\classes started by w7-Will_lap in C:\Users\w7-Will_lap\git\battleship)
+2014-07-23 20:20:29.769  INFO 7092 [main] --- s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6e0e0380: startup date [Wed Jul 23 20:20:29 PDT 2014]; root of context hierarchy
+2014-07-23 20:20:34.882  INFO 7092 [main] --- j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2014-07-23 20:20:41.431  INFO 7092 [main] --- o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2014-07-23 20:20:41.488  INFO 7092 [main] --- c.b.c.battleships.TestDriverWithMySQL    : Started TestDriverWithMySQL in 13.095 seconds (JVM running for 14.588)
+2014-07-23 20:20:43.172  INFO 7092 [Thread-1] --- s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@6e0e0380: startup date [Wed Jul 23 20:20:29 PDT 2014]; root of context hierarchy
+2014-07-23 20:20:43.176  INFO 7092 [Thread-1] --- o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2014-07-23 20:20:43.183  INFO 7092 [Thread-1] --- j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2014-07-23 20:27:05.225  INFO 6960 [main] --- c.b.c.battleships.TestDriverWithMySQL    : Starting TestDriverWithMySQL on w7-Will_lap-PC with PID 6960 (C:\Users\w7-Will_lap\git\battleship\target\classes started by w7-Will_lap in C:\Users\w7-Will_lap\git\battleship)
+2014-07-23 20:27:05.352  INFO 6960 [main] --- s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@222411d2: startup date [Wed Jul 23 20:27:05 PDT 2014]; root of context hierarchy
+2014-07-23 20:27:10.500  INFO 6960 [main] --- j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2014-07-23 20:27:16.735  INFO 6960 [main] --- o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2014-07-23 20:27:16.796  INFO 6960 [main] --- c.b.c.battleships.TestDriverWithMySQL    : Started TestDriverWithMySQL in 12.856 seconds (JVM running for 14.325)
+2014-07-23 20:27:18.336  INFO 6960 [Thread-1] --- s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@222411d2: startup date [Wed Jul 23 20:27:05 PDT 2014]; root of context hierarchy
+2014-07-23 20:27:18.341  INFO 6960 [Thread-1] --- o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2014-07-23 20:27:18.348  INFO 6960 [Thread-1] --- j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2014-07-23 20:29:21.036  INFO 7952 [main] --- c.b.c.battleships.TestDriverWithMySQL    : Starting TestDriverWithMySQL on w7-Will_lap-PC with PID 7952 (C:\Users\w7-Will_lap\git\battleship\target\classes started by w7-Will_lap in C:\Users\w7-Will_lap\git\battleship)
+2014-07-23 20:29:21.161  INFO 7952 [main] --- s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@33daf0bf: startup date [Wed Jul 23 20:29:21 PDT 2014]; root of context hierarchy
+2014-07-23 20:29:26.209  INFO 7952 [main] --- j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2014-07-23 20:29:32.643  INFO 7952 [main] --- o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2014-07-23 20:29:32.702  INFO 7952 [main] --- c.b.c.battleships.TestDriverWithMySQL    : Started TestDriverWithMySQL in 12.976 seconds (JVM running for 14.601)
+2014-07-23 20:29:34.182  INFO 7952 [Thread-1] --- s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@33daf0bf: startup date [Wed Jul 23 20:29:21 PDT 2014]; root of context hierarchy
+2014-07-23 20:29:34.186  INFO 7952 [Thread-1] --- o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2014-07-23 20:29:34.190  INFO 7952 [Thread-1] --- j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2014-07-23 20:38:48.576  INFO 8136 [main] --- c.b.c.battleships.TestDriverWithMySQL    : Starting TestDriverWithMySQL on w7-Will_lap-PC with PID 8136 (C:\Users\w7-Will_lap\git\battleship\target\classes started by w7-Will_lap in C:\Users\w7-Will_lap\git\battleship)
+2014-07-23 20:38:48.743  INFO 8136 [main] --- s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@5a0800f2: startup date [Wed Jul 23 20:38:48 PDT 2014]; root of context hierarchy
+2014-07-23 20:38:54.086  INFO 8136 [main] --- j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2014-07-23 20:39:00.575  INFO 8136 [main] --- o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2014-07-23 20:39:00.652  INFO 8136 [main] --- c.b.c.battleships.TestDriverWithMySQL    : Started TestDriverWithMySQL in 13.323 seconds (JVM running for 14.964)
+2014-07-23 20:43:43.117  INFO 8164 [main] --- c.b.c.battleships.TestDriverWithMySQL    : Starting TestDriverWithMySQL on w7-Will_lap-PC with PID 8164 (C:\Users\w7-Will_lap\git\battleship\target\classes started by w7-Will_lap in C:\Users\w7-Will_lap\git\battleship)
+2014-07-23 20:43:43.301  INFO 8164 [main] --- s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7e366c7: startup date [Wed Jul 23 20:43:43 PDT 2014]; root of context hierarchy
+2014-07-23 20:43:48.708  INFO 8164 [main] --- j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2014-07-23 20:43:55.308  INFO 8164 [main] --- o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2014-07-23 20:43:55.367  INFO 8164 [main] --- c.b.c.battleships.TestDriverWithMySQL    : Started TestDriverWithMySQL in 13.81 seconds (JVM running for 15.479)
+2014-07-23 20:43:56.958  INFO 8164 [Thread-1] --- s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7e366c7: startup date [Wed Jul 23 20:43:43 PDT 2014]; root of context hierarchy
+2014-07-23 20:43:56.963  INFO 8164 [Thread-1] --- o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2014-07-23 20:43:56.970  INFO 8164 [Thread-1] --- j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
