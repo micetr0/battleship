@@ -299,3 +299,11 @@ Error starting ApplicationContext. To display the auto-configuration report enab
 2014-07-23 20:43:56.958  INFO 8164 [Thread-1] --- s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7e366c7: startup date [Wed Jul 23 20:43:43 PDT 2014]; root of context hierarchy
 2014-07-23 20:43:56.963  INFO 8164 [Thread-1] --- o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
 2014-07-23 20:43:56.970  INFO 8164 [Thread-1] --- j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2014-07-24 19:09:12.187  INFO 8840 [main] --- c.b.c.battleships.TestDriverWithMySQL    : Starting TestDriverWithMySQL on w7-Will_lap-PC with PID 8840 (C:\Users\w7-Will_lap\git\battleship\target\classes started by w7-Will_lap in C:\Users\w7-Will_lap\git\battleship)
+2014-07-24 19:09:12.317  INFO 8840 [main] --- s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@222411d2: startup date [Thu Jul 24 19:09:12 PDT 2014]; root of context hierarchy
+2014-07-24 19:09:17.632  INFO 8840 [main] --- j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2014-07-24 19:09:24.300  INFO 8840 [main] --- o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2014-07-24 19:09:24.364  INFO 8840 [main] --- c.b.c.battleships.TestDriverWithMySQL    : Started TestDriverWithMySQL in 13.651 seconds (JVM running for 15.329)
+2014-07-24 19:09:26.890  INFO 8840 [Thread-1] --- s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@222411d2: startup date [Thu Jul 24 19:09:12 PDT 2014]; root of context hierarchy
+2014-07-24 19:09:26.894  INFO 8840 [Thread-1] --- o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2014-07-24 19:09:26.898  INFO 8840 [Thread-1] --- j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
