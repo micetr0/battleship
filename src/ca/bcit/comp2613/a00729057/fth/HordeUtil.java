@@ -57,8 +57,9 @@ public class HordeUtil {
 	private static File getFile(String name) {
 		// TODO note, there is something not quite right about fileStr ... fix the bug please
 		// in its current form the parent directory will likely be Invalid
+		//Correction: added...a slash?
 		String fileStr = System.getProperty("user.dir") + File.separator + "src" + File.separator + 
-				HordeUtilTestDriver.class.getPackage().getName().replace(".", "|") + File.separator + name;
+				HordeUtilTestDriver.class.getPackage().getName().replace(".", "/") + File.separator + name;
 		return new File(fileStr);
 	}
 	
