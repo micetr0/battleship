@@ -1,5 +1,6 @@
 package ca.bcit.comp2613.battleships;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -16,12 +17,18 @@ import ca.bcit.comp2613.battleships.repository.ShipRepository;
 import ca.bcit.comp2613.battleships.util.ShipUtil;
 
 @EnableAutoConfiguration
-@ImportResource("applicationContext.xml")
+//@ImportResource("applicationContext.xml")
 
 public class TestDriverWithMySQL {
 
     public static void main(String[] args){
         ConfigurableApplicationContext context = SpringApplication.run(TestDriverWithMySQL.class);
+        try {
+			org.h2.tools.Server.createWebServer(null).start();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         
         ShipRepository shipRepository = context.getBean(ShipRepository.class);
         BoardRepository boardRepository = context.getBean(BoardRepository.class);
@@ -58,6 +65,12 @@ public class TestDriverWithMySQL {
         
         board.setShips(ships);
         boardRepository.save(board);
+        
+        
+        //testing if it works 
+        //for (String beanDefinitionName : context.getBeanDefinitionNames()) {
+		//	System.out.println(beanDefinitionName);
+		//}
         
         Ship ship = shipRepository.findOne("2");
         System.out.println(ship);
