@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
+
+
 public class HordeUtil {
 	
 	// creates 100 Random Horde Characters
@@ -69,20 +71,24 @@ public class HordeUtil {
 	}
 
 	private static ObjectMapper createJacksonXmlMapper() {
-		return new ObjectMapper();
+		
+		return new XmlMapper();
+		
+		
 		// TODO
 		// return new ObjectMapper() will return a JSON Object Mapper
 		// How do we return an XML Object Mapper?
 		// hint: https://github.com/FasterXML/jackson-dataformat-xml
-		
+		//removed return new ObjectMapper();
 	}
 
 	// TODO write the contents of xmlStr to a file (charactersReport.xml)
+	//completed FileUtils statement 
 	public static void saveXMLToFile(String xmlStr) throws InvalidDirectoryException, IOException {
 		File file = getFile("charactersReport.xml");
 		if (!file.getParentFile().exists()) {			
 			throw new InvalidDirectoryException(file.getParent());
 		}
-		//FileUtils.write...
+		FileUtils.writeStringToFile(file, xmlStr);
 	}
 }
