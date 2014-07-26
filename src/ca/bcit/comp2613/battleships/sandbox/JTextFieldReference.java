@@ -24,6 +24,10 @@ public class JTextFieldReference {
 	    
 	    JTextField x = textFieldMap.get("x");
 	    JTextField y = textFieldMap.get("y");
+	    
+	    x.setText("Hello");
+	    // or
+	    textFieldMap.get("x").setText("GoodBye");
 	}
 	
 }
