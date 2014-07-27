@@ -88,8 +88,7 @@ public class HordeUtil {
 		if (!file.getParentFile().exists()) {			
 			throw new InvalidDirectoryException(file.getParent());
 		}
-		//testing
-		//System.out.println("OMFG WORK");
+
 		FileUtils.writeStringToFile(file, xmlStr);
 	}
 	
