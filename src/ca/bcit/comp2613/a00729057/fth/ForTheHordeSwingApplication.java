@@ -73,9 +73,10 @@ public class ForTheHordeSwingApplication {
 					// convert the contents from the textarea to an ArrayList<Character>
 					// persist that arraylist to the in memory DB (H2)
 					//
-					// hints:
-					//ArrayList<Character> characters =  ???.getCharactersArrayListFromXML(textArea.getText());
-					// aCertainRepository.aMethodSimilarToPersist(characters);
+					// hints: 
+					//Correct: ???.getChar and .save added for magic method
+					ArrayList<Character> characters =  HordeUtil.getCharactersArrayListFromXML(textArea.getText());
+					characterRepository.save(characters);
 				} catch (Exception e) {
 					log.error("", e);
 				}
@@ -103,6 +104,7 @@ public class ForTheHordeSwingApplication {
 				// TODO - sort the characters by Level
 				// note this can be achieved by a Comparator ... or if you are really keen, modify
 				// the SQL in mysteriousQuery with an 'order by xxx' clause
+				//DID IT WITH MYSQL!! YAY
 				String xmlStr = HordeUtil
 						.getCharacterArrayListAsString(characters);
 				textArea.setText(xmlStr);

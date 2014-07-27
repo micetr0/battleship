@@ -78,16 +78,17 @@ public class HordeUtil {
 		// return new ObjectMapper() will return a JSON Object Mapper
 		// How do we return an XML Object Mapper?
 		// hint: https://github.com/FasterXML/jackson-dataformat-xml
-		//replaced  return new ObjectMapper() with new XmlMapper();
+		//replaced return new ObjectMapper() with new XmlMapper();
 	}
 
 	// TODO write the contents of xmlStr to a file (charactersReport.xml)
 	//completed FileUtils statement 
 	public static void saveXMLToFile(String xmlStr) throws InvalidDirectoryException, IOException {
-		File file = getFile("charactersReports.xml");
+		File file = getFile("charactersReport.xml");
 		if (!file.getParentFile().exists()) {			
 			throw new InvalidDirectoryException(file.getParent());
 		}
+		System.out.println("OMFG WORK U ASS");
 		FileUtils.writeStringToFile(file, xmlStr);
 	}
 	
