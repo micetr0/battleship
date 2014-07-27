@@ -12,8 +12,8 @@ import org.springframework.context.annotation.ImportResource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 
-import ca.bcit.comp2613.coursematerial.day09.model.Teacher;
-import ca.bcit.comp2613.coursematerial.day09.repository.TeacherRepository;
+//import ca.bcit.comp2613.coursematerial.day09.model.Teacher;
+//import ca.bcit.comp2613.coursematerial.day09.repository.TeacherRepository;
 @EnableAutoConfiguration
 // uses Spring boot's default in-memory DB http://www.h2database.com
 // to start the embedded server:
