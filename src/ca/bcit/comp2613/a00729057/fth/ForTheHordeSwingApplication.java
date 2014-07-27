@@ -3,6 +3,7 @@ package ca.bcit.comp2613.a00729057.fth;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.persistence.EntityManagerFactory;
@@ -55,6 +56,14 @@ public class ForTheHordeSwingApplication {
 	public void initialize() {
 		ConfigurableApplicationContext context = null;
 		context = SpringApplication.run(H2Config.class);
+		//added in for H2 server 
+//		try {
+//			org.h2.tools.Server.createWebServer(null).start();
+//	    } catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//      }
+		
 		characterRepository = context.getBean(CharacterRepository.class);
 		EntityManagerFactory emf = (EntityManagerFactory) context
 				.getBean("entityManagerFactory");
@@ -122,6 +131,7 @@ public class ForTheHordeSwingApplication {
 				// in XML format and output it to charactersReport.xml (same
 				// dir as
 				// characters.xml)
+				//Already completed in HordeUtil??
 				String xmlStr = textArea.getText();
 				try {
 					HordeUtil.saveXMLToFile(xmlStr);

@@ -44,12 +44,13 @@ public class CustomQueryHelper {
 		try {
 			em = emf.createEntityManager();
 			// TODO - mysteriousQuerySQL is pulled from a .properties file, but this is broken - fix it
-			String mysteriousQuerySQL = propertiesConfiguration.getString("?mysteriousQuery?");
+			//removed ? ?
+			String mysteriousQuerySQL = propertiesConfiguration.getString("mysteriousQuery");
 			ForTheHordeSwingApplication.log.info("mysteriousQuerySQL : " + mysteriousQuerySQL);
 			Query query = em.createNativeQuery(
 					mysteriousQuerySQL,
 					Character.class);
-			//query.setParameter("teacher_id", id);
+			//query.setParameter("teacher_id", teacherid);
 			retval = query.getResultList();
 		} catch (Exception e) {
 
